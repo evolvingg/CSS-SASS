@@ -1,0 +1,30 @@
+$heroV2:(
+	headingText: (
+		color: $brand-primary-color, 
+		font-mob: map-deep-get($fontVariable,'h1-mob','font'),
+		lh-mob: map-deep-get($fontVariable,'h1-mob','lh'),
+		font-desk: map-deep-get($fontVariable,'h1','font'),
+		lh-desk: map-deep-get($fontVariable,'h1','lh'),
+		background-color: rgba(255, 255, 255, 0.85),
+	),
+	subHeadingText: (
+		color: $brand-secondary-color, 
+		font: map-deep-get($fontVariable,'h5','font'),
+		lh: map-deep-get($fontVariable,'h5','lh')
+	),
+	subHeadingTextMob: (
+		font: map-deep-get($fontVariable,'h4-mob','font'),
+		lh: map-deep-get($fontVariable,'h4-mob','lh')
+	),
+	videoHeadingText: (
+		font: map-deep-get($fontVariable,'h1-var-mob','font'),
+		lh: map-deep-get($fontVariable,'h1-var-mob','lh'),
+		background-color: rgba(255, 255, 255, 0.85)
+	),
+	descriptionText: (
+		font-mob: map-deep-get($fontVariable,'sh1-mob','font'),
+		lh-mob: map-deep-get($fontVariable,'sh1-mob','lh'),
+		font: map-deep-get($fontVariable,'sh1','font'),
+		lh: map-deep-get($fontVariable,'sh1','lh'),
+	)
+);

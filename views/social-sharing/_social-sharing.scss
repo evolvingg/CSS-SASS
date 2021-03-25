@@ -1,0 +1,92 @@
+.c-social-sharing-inline {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 45px;
+
+    .c-social-sharing {
+
+        &-list.first-child {
+            display: none;
+        }
+
+        &-component {
+            display: flex;
+            margin-bottom: 0;
+            padding: 0;
+            flex-wrap: wrap;
+
+            .c-social-sharing{
+                &-list {
+                    display: block;
+                    margin: 0 4px;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                    &:nth-child(4n) {
+                        margin-right: 0;
+                    }
+                }
+
+                &-component {
+                    margin: 0 -4px;
+                }
+
+                &-facebook,
+                &-twitter,
+                &-whatsapp,
+                &-email {
+                    width: 42px;
+                    height: 42px;
+                    border-radius: 50px;
+                    background-color: $brand-primary-color;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    
+                    &:hover {
+                        background-color: $brand-hover-color;
+                    }
+                }
+
+                &-facebook {
+                    .c-svg {
+                        width: 11px;
+                        height: 24px;
+                    }
+                }
+
+                &-twitter {
+                    .c-svg {
+                        width: 23px;
+                        height: 18px;
+                    }
+                }
+
+                &-whatsapp {
+                    .c-svg {
+                        width: 24px;
+                        height: 22px;
+                    }
+                }
+
+                &-email {
+                    .c-svg {
+                        width: 23px;
+                        height: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .product-detail-wrapper &{
+        margin-bottom: 50px;
+    }
+    svg {
+        display: block;
+    }
+}
+
+@import 'social-sharing__desktop';

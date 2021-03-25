@@ -1,0 +1,84 @@
+@import 'accordion-v2-variables';
+
+// Accordion v2 component
+.accordion-v2 {
+    svg {
+        display: block;
+    }
+
+    >.accordion-v2 {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    &.last-accordion {
+        margin-bottom: 25px;
+        
+        .accordion-v2-panel {
+            border-bottom: 1px solid map-deep-get($accordionStyles, 'title', border);
+        }
+    }
+
+    &-panel {
+        width: 100%;
+
+        &__body {
+            display: none;
+
+        }
+
+        &-heading {
+
+            &__title {
+                position: relative;
+                margin: 0;
+                border-top: 1px solid map-deep-get($accordionStyles, 'title', border);
+            }
+    
+            &__link {
+                @include setFonts($accordionStyles, 'title'); 
+    
+                color: map-deep-get($accordionStyles, 'title', color);
+                font-weight: 700;
+                display: block;
+                padding: 11px 44px 14px 0;
+                cursor: pointer;
+                position: relative;
+                z-index: 1;
+    
+                &:hover,
+                &:active,
+                &:focus {
+                    color: map-deep-get($accordionStyles, 'title', color);
+                    text-decoration: none;
+                }
+    
+            }
+    
+            &__icon {
+                &-expand {
+
+                    &::after {
+                        @include center(y);
+
+                        right: 0;
+                        background: url(../svgs/stack/svg/sprite.stack.svg#less-info) center no-repeat;
+                        width: 10px;
+                        content: '';
+                        height: 10px;
+                        right: 18px;
+                        background-size: 100%;
+                    }
+                }
+            }
+    
+            &--is-collapsed &__icon-expand {
+                &::after {
+                    background-image: url('../svgs/stack/svg/sprite.stack.svg#more-info');
+                }
+            }
+        }
+    }
+}
+
+@import 'accordion-v2__desktop';

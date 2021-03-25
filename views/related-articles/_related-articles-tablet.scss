@@ -1,0 +1,27 @@
+@media(min-width: $screen-sm) {
+    .c-related-articles {
+        margin-bottom: 50px;
+        &-heading {
+            .o-text__heading-2 {
+                @include fontSize(h1-mob);
+            }
+        }
+        &-item {
+            &-content {
+                .o-text__heading-3 {
+                    @include fontSize(sh6-mob);
+                    font-weight: bold;
+                    margin-bottom: 4px;
+                }
+                .o-text__heading-2 a {
+                    font-size: $subheadingFontSize;
+                    line-height: $subheadingLineHeight;
+                    margin-bottom: 4px;
+                }
+                &__desc {
+                    @include fontSize(sh5-mob);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+@media(min-width: $screen-md) {
+    .c-related-products {
+        &-heading {
+            .o-text__heading-2 {
+                padding: 75px 0 34px 0;
+                color: map-get($relatedColors, headingColor);
+                @include fontSize(h2);
+            }
+        }
+        &-item {
+            position: relative;
+            &-content {
+                padding: 20px;
+                .o-text__heading-2,
+                .o-text__heading-2 a {
+                    @include fontSize(sh2);
+                    color: map-get($relatedColors, headingColor);
+                }
+                .c-inline-review {
+                    margin-bottom: 75px;
+                }
+            }
+        }
+    }
+}

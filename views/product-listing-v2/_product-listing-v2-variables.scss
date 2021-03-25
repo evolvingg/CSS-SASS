@@ -1,0 +1,64 @@
+$prodList:(
+    subheading :(
+        font: map-deep-get($fontVariable,'h5-mob','font'),
+        lh: map-deep-get($fontVariable,'h5-mob','lh')
+    ),
+    subheading-desktop:(
+        font: map-deep-get($fontVariable,'h5','font'),
+        lh: map-deep-get($fontVariable,'h5','lh')
+    ),
+    heading: (
+        font: map-deep-get($fontVariable,'h1-mob','font'),
+        lh: map-deep-get($fontVariable,'h1-mob','lh'),
+        color: $brand-primary-color,
+    ),
+    heading-desktop: (
+        font: map-deep-get($fontVariable,'h2','font'),
+        lh: map-deep-get($fontVariable,'h2','lh')
+    ),
+    select-label:(
+        font: map-deep-get($fontVariable,'select-label','font'),
+        lh: map-deep-get($fontVariable,'select-label','lh'),
+        color: $brand-primary-color,
+    ),    
+    select:(
+        font: map-deep-get($fontVariable,'select','font'),
+        lh: map-deep-get($fontVariable,'select','lh'),
+    ),    
+    total-product:(
+        font: map-deep-get($fontVariable,'product-count','font'),
+        lh: map-deep-get($fontVariable,'product-count','lh'),
+    ),    
+    product-tag:(
+        font: map-deep-get($fontVariable,'tag-txt','font'),
+        lh: map-deep-get($fontVariable,'tag-txt','lh'),
+    ),   
+    product-tag-desktop:(
+        font: map-deep-get($fontVariable,'sh6-mob','font'),
+        lh: map-deep-get($fontVariable,'sh6-mob','lh'),
+    ),   
+    product-heading:(
+        font: map-deep-get($fontVariable,'select','font'),
+        lh: map-deep-get($fontVariable,'select','lh'),
+    ),   
+    product-heading-desktop:(
+        font: map-deep-get($fontVariable,'sh2','font'),
+        lh: map-deep-get($fontVariable,'sh2','lh'),
+    ),   
+    tag:(
+        font: map-deep-get($fontVariable,'product-tag','font'),
+        lh: map-deep-get($fontVariable,'product-tag','lh'),
+        color: $brand-primary-color,
+        bg: $brand-tags-color
+    ),   
+    tag-desktop:(
+        font: map-deep-get($fontVariable,'sh6-mob','font'),
+        lh: map-deep-get($fontVariable,'sh6-mob','lh'),
+    ),
+    product-link:(
+        color: $brand-primary-color,
+    ),
+    active-arrow:(
+        color: $brand-secondary-color3,
+    )
+);

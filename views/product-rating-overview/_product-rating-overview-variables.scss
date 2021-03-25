@@ -1,0 +1,12 @@
+$product-rating:(
+	customReviewtext: (
+		color: $brand-primary-color, 
+		font: map-deep-get($fontVariable,'sh7','font'),
+		lh: map-deep-get($fontVariable,'sh7','lh'),
+	),
+	inlineReviewtext: (
+		color: $brand-primary-color, 
+		font: map-deep-get($fontVariable,'small-text','font'),
+		lh: map-deep-get($fontVariable,'small-text','lh')
+	)
+);

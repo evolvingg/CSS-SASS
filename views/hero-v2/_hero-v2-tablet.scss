@@ -1,0 +1,19 @@
+@media (min-width: $screen-sm){
+	.c-hero-v2{
+
+		&--video {
+			.c-hero-v2__wrapper {
+				.o-btn--play-video {
+					width: 83px;
+					height: 83px;
+					top: 134px;
+
+					svg {
+						width: 83px;
+						height: 83px;
+					}
+				}
+			}
+		}
+	}
+}

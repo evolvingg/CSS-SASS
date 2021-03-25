@@ -1,0 +1,137 @@
+.c-carousel-v2 {
+    @include componentVerticalSpace();
+
+    svg {
+        display: block;
+    }
+
+    @media (min-width: $screen-md){
+        margin-bottom: 0;
+    }
+
+    .container {
+        padding: 0;
+        max-width: 1680px;
+    }
+
+    .c-hero-v2 {
+        margin: 0;
+        float: left;
+        width: 100%;
+
+        &__wrapper {
+            margin: 0;
+            text-align: center;
+            padding: 0;
+
+            @media (min-width: $screen-sm) and (max-width: $screen-md) {
+                padding: 0;
+                width: 100%;
+                margin: 0 auto;
+            }
+
+            @media (min-width: $screen-md) {
+                padding: 0;
+            }
+        }
+
+        &__image {
+            overflow: hidden;
+        }
+
+        &__copy {
+            display: none;
+        }
+
+        &:nth-child(n+2) {
+            visibility: hidden;
+            height: 1px;
+        }
+    }
+
+    &__wrapper {
+        margin: 0 auto;
+        width: 100%;
+        position: relative;
+
+        @media (min-width: $screen-md) {
+            margin: 0 auto;
+        }
+
+        > .slick-slider {
+            margin: 0 auto;
+            position: static;
+        }
+
+        //sass-lint:disable no-important
+        .slick-arrow {
+            @include center(y);
+
+            min-height: 35px;
+            min-width: 35px;
+            z-index: 1;
+            background-size: 35px;
+
+            @media (min-width: $screen-md){
+                min-height: 50px;
+                min-width: 50px;
+                background-size: 50px;
+            }
+        }
+
+        .slick-prev {
+            left: 8px;
+
+            @media (min-width: $screen-sm) {
+                left: 12px;
+            }
+
+            @media (min-width: $screen-md) {
+                left: 51px;
+            }
+        }
+
+        .slick-next {
+            right: 8px;
+
+            @media (min-width: $screen-sm) {
+                right: 12px;
+            }
+
+            @media (min-width: $screen-md) {
+                right: 51px;
+            }
+        }
+
+        .slick-initialized {
+            .c-hero-v2 {
+                &:nth-child(n+2) {
+                    visibility: visible;
+                    height: auto;
+                } 
+            }
+        }
+    }
+
+    &-nav {
+        .slick-list {
+            display: none;
+        }
+
+        &__image {
+            display: none;
+        }
+    }
+
+    &-progress-bar {
+        height: 0;
+    }
+
+    &-pause {
+        display: none;
+
+        .o-btn--pause {
+            position: absolute;
+        }
+    }
+}

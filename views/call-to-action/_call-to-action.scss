@@ -1,0 +1,34 @@
+.call-to-action {
+    svg {
+        display: block;
+    }
+
+    &__wrapper{
+        .o-btn--primary {
+            margin: 0 auto;
+        }
+    }
+    
+    &.thank-you {
+        button {
+            margin-bottom: 75px;
+        }
+    }
+
+    &.error-msg {
+        .call-to-action {
+            &__wrapper {
+                display: flex;
+                justify-content: center;
+                align-content: center;
+            }
+        }
+        button {
+            margin-bottom: 40px;
+            min-width: 246px;
+        }
+    }
+}
+
+@import 'call-to-action__tablet';
+@import 'call-to-action__desktop';

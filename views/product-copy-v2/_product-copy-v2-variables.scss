@@ -1,0 +1,29 @@
+$productCopyStyles: (
+    heading: (
+        font: 35px,
+        lh: 1.14,
+        color: $brand-primary-color
+    ),
+    heading-md: (
+        font: 50px,
+        lh: 1.1
+    ),
+    description: (
+        font: 17px,
+        lh: 1.47,
+        color: $brand-secondary-color
+    ),
+    description-md: (
+        font: 18px,
+        lh: 1.56
+    ),
+    accordion-text: (
+        font: 15px,
+        lh: 1.53,
+        color: $brand-secondary-color
+    ),
+    accordion-text-md: (
+        font: 16px,
+        lh: 1.5
+    )
+);

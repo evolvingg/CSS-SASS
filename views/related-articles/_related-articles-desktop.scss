@@ -1,0 +1,24 @@
+@media(min-width: $screen-md) {
+    .c-related-articles {
+        margin-bottom: 75px;
+        &-heading {
+            .o-text__heading-2 {
+                @include fontSize(h2);
+            }
+        }
+        &-item {
+            &-content {
+                .o-text__heading-3 {
+                    font-size: $subheadingFontSize;
+                    line-height: $subheadingLineHeight;
+                }
+                .o-text__heading-2 a {
+                    @include fontSize(h4);
+                }
+                &__desc {
+                    @include fontSize(txtlink);
+                }
+            }
+        }
+    }
+}

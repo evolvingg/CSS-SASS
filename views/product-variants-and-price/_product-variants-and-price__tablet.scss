@@ -1,0 +1,25 @@
+@media (min-width: $screen-sm) {
+    .variant-shoppable-wrapper {
+        >.column-container {
+            .col-md-6 {
+                @include setCols(9, 9, 6);
+    
+                &:first-of-type {
+                   @include setCols(3,3,6);
+
+                   .container {
+                       padding: 0;
+                   }
+                }
+            }
+        }
+        
+        margin-bottom: 20px;
+    }
+
+    .c-product-variants-and-price {
+        .c-dropdown {
+            margin-bottom: 0;
+        }
+    }
+}

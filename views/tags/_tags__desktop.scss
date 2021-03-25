@@ -1,0 +1,12 @@
+@media (min-width: $screen-md) {
+    &-heading__text {
+        @include setFonts($tags, 'headingText-md');
+
+        padding-bottom: 27px;
+    }
+    &-sub-heading__text {
+        @include setFonts($tags, 'subHeadingText');
+
+        margin-bottom: 10px;
+    }
+}

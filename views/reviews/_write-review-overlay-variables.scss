@@ -1,0 +1,21 @@
+$rating-overlay:(
+	overlayBg: (
+		 bgColor: rgba(0, 0, 0, 0.5),
+		 shadow: 0 0 6px 0 rgba(0, 0, 0, 0.25)
+	),
+	overlayHeading: (
+		color: $brand-primary-color, 
+		font: map-deep-get($fontVariable,'sh2','font'),
+		lh: map-deep-get($fontVariable,'sh2','lh'),
+		border: solid 1px $brand-primary-color
+	),
+	overlayLabel: (
+		color: $brand-secondary-color, 
+		font: map-deep-get($fontVariable,'sh2-mob','font'),
+		lh: map-deep-get($fontVariable,'sh2-mob','lh')
+	),
+	infoText: (
+		font: map-deep-get($fontVariable,'sh7','font'),
+		lh: map-deep-get($fontVariable,'sh7','lh')
+	)
+);

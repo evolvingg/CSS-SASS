@@ -1,0 +1,253 @@
+@import '_write-review-overlay-variables';
+
+#rr-overlay {
+    background-color:map-deep-get($rating-overlay,'overlayBg', bgColor);
+}
+
+#rr-lightbox {
+    .rr-modalWidowcontent{
+        box-shadow: map-deep-get($rating-overlay,'overlayBg', shadow);
+    }
+
+    #rr-modalWidowcontainer {
+        border-radius: 0;
+
+        @media (min-width: $screen-sm) {
+            padding: 37px 30px 40px;
+        }
+
+        a.closeButton {
+            background: transparent url(../svgs/stack/svg/sprite.stack.svg#close-green) no-repeat center;
+        }
+
+        .rr-mandatory {
+            margin-left: 4px;
+        }
+
+        .rr-box-wrapper {
+            .rr-review-section {
+                @media (min-width: $screen-md){
+                    width: 61%;
+                }
+
+                .rr-label {
+
+                    padding-bottom: 12px;
+
+                    @media (min-width: $screen-sm) {
+                        margin-left: 0;
+                    }
+
+                    &.rr-termandconditions {
+                        width: auto;
+
+                        @media (min-width: $screen-sm) {
+                            margin-left: 0;
+                        }
+
+                        .rr-checkbox {
+                            margin-top: 0;
+                        }
+                    }
+
+                }
+
+                li.rr-button-container {
+                    border: none;
+                    margin-top: 17px;
+                    margin-left: 0;
+
+                    .rr-button {
+                        @media (min-width: $screen-sm) {
+                            width: 43%;
+                            margin-right: 30px;
+                        }
+                        @media (min-width: $screen-md){
+                            width: 61%;
+                        }
+                    }
+                }
+
+                .rr-gdpr {
+                    color: map-deep-get($rating-overlay,'overlayLabel', color);
+                    line-height: map-deep-get($rating-overlay,'overlayLabel', lh);
+
+                    @media (min-width: $screen-sm) {
+                        margin-left: 0;
+                    }
+
+                    @media (min-width: $screen-md) {
+                        width: 100%;
+                    }
+                }
+
+                .rr-label,
+                .myStarRating {
+                    @include setFonts($rating-overlay,'overlayLabel');
+
+                    color: map-deep-get($rating-overlay,'overlayLabel', color);
+                    line-height: map-deep-get($rating-overlay,'overlayLabel', lh);
+
+                    @media (min-width: $screen-sm) {
+                        width: 18%;
+                        text-align: left;
+                    }
+
+                    &-text{
+                        font-weight: 400;
+                    }
+                }
+
+                .rr-textarea,
+                .rr-text-field {
+                    border: 1px solid $brand-input-border-color;
+                    width: 100%;
+
+                    @media (min-width: $screen-sm) {
+                        width: 79%;
+                    }
+                }
+
+                .rr-mandatory {
+                    color: $brand-secondary-color;
+                }
+
+                .rr-info-text {
+                    @include setFonts($rating-overlay,'infoText');
+
+                    line-height: map-deep-get($rating-overlay,'infoText', lh);
+                    color: $color-black;
+                    margin-top: 24px;
+
+                    @media (min-width: $screen-sm) {
+                        margin-left: 29%;
+                        width: 64%;
+                    }
+
+                    @media (min-width: $screen-md) {
+                        margin-left:21%;
+                    }
+                }
+
+                .rr-heading-2 {
+                    @include setFonts($rating-overlay,'overlayHeading');
+
+                    color: map-deep-get($rating-overlay,'overlayHeading', color);
+                    line-height: map-deep-get($rating-overlay,'overlayHeading', lh);
+                    border-bottom:  map-deep-get($rating-overlay,'overlayHeading', border);
+                    font-weight: 700;
+                    text-align: center;
+                    padding-bottom: 14px;
+                }
+
+                .rr-mandatory {
+                    position: static;
+                }
+
+            }
+        }
+
+        .rr-product-info {
+            border-bottom:  map-deep-get($rating-overlay,'overlayHeading', border);
+
+            @media (min-width: $screen-sm){
+                border-bottom: 0;
+            }
+            .rr-heading-3 {
+                @include setFonts($rating-overlay,'overlayHeading');
+
+                color: map-deep-get($rating-overlay,'overlayHeading', color);
+                line-height: map-deep-get($rating-overlay,'overlayHeading', lh);
+                font-weight: 700;
+                text-align: center;
+
+                padding: 12px 0;
+
+                @media (min-width: $screen-sm){
+                    padding: 0 10px;
+                }
+            }
+        }
+
+        .rr-submit-rating {
+            margin-bottom: 14px;
+            background: none;
+            border-bottom: dotted 1px $brand-primary-color;
+
+            @media(min-width: $screen-sm) {
+                margin-bottom: 2px;
+                border-bottom: 0;
+            }
+        }
+
+        .rr-fieldset {
+            border-bottom:  map-deep-get($rating-overlay,'overlayHeading', border);
+        }
+
+        .rr-field-info {
+            @include setFonts($rating-overlay,'infoText');
+
+            line-height: map-deep-get($rating-overlay,'infoText', lh);
+            
+            @media (min-width: $screen-sm) {
+                transform: translateY(50%);
+                margin: 18px 0 0 15px;
+                position: absolute;
+                top: 6px;
+                vertical-align: middle;
+            }
+
+            @media (min-width: $screen-md) {
+                left: 65%;
+            }
+        }
+
+        .rr-button {
+            @include o-btn--primary;
+
+            max-width: none;
+            margin: 30px 0 0;
+
+            @media (min-width: $screen-sm) {
+                width: 47%;
+            }
+
+            @media (min-width: $screen-md) {
+                width: 61%;
+            }
+        }
+
+        .rr-submission-form {
+            margin: 0;
+
+            @media (min-width: $screen-sm){
+                margin: 13px 0 0;
+            }
+        }
+
+        &.rr-alertBox {
+            height: auto;
+        }
+    }
+
+    .rr-alertBox h3 {
+        color: $color-black;
+    }
+
+    .postReviewStarRating {
+        .starRatingsContainer {
+            li {
+                width: 18px;
+                
+                @media (min-width: $screen-sm) and (max-width: $screen-md){
+                    margin-right: 2px;
+                }
+
+                &:focus{
+                    border: 0;
+                    outline: 0;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+$countrySelector: (
+
+    quote: (
+        color: $brand-primary-color,
+        font: map-deep-get($fontVariable, 'h3-mob', font),
+        lh: map-deep-get($fontVariable, 'h3-mob', lh)
+    ),
+    quote-desk: (
+        font: map-deep-get($fontVariable, 'h3', font),
+        lh: map-deep-get($fontVariable, 'h3', lh)
+    ),
+    placeholder: (
+        color: $brand-secondary-color,
+        font: map-deep-get($fontVariable, 'select', font),
+        lh: map-deep-get($fontVariable, 'select', lh)
+    ),
+    list-link: (
+        color: $brand-secondary-color,
+        font: map-deep-get($fontVariable, 'sh6', font),
+        lh: map-deep-get($fontVariable, 'sh6', lh),
+        hvr-color: $brand-primary-color
+    ),
+    list-link-desk: (
+        font: map-deep-get($fontVariable, 'default-font', font),
+        lh: map-deep-get($fontVariable, 'default-font', lh)
+    ),
+    autosearch: (
+        br-color: $brand-secondary-color4,
+        color: $brand-primary-color,
+        bg-color: $color-white,
+        font: map-deep-get($fontVariable, 'default-font', font),
+        lh: map-deep-get($fontVariable, 'default-font', lh)
+    )
+);

@@ -1,0 +1,8 @@
+$breadcrumb: (
+    'linkText': (
+        font: map-deep-get($fontVariable,'sh6-mob','font'),
+        lh: map-deep-get($fontVariable,'sh6-mob','lh'),
+        color: $brand-secondary-color,
+        active-link-color: $brand-primary-color
+    )
+);

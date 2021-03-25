@@ -1,0 +1,62 @@
+@media (min-width: $screen-md){
+	.c-featured-content {
+		&-copy {
+			padding-top: 76px;
+
+			&__desc {
+	    		@include setFonts($featured-content,'subHeading');
+
+	    		line-height: map-deep-get($featured-content,'subHeading', lh);
+	    		margin-bottom: 17px;
+	    	}
+
+			&-headline {
+				@include setFonts($featured-content,'headingText');
+
+				line-height: map-deep-get($featured-content,'headingText', lh);
+			}
+
+			&__teaser-description {
+				margin-bottom: 19px;
+
+				p{
+					margin: 0;
+				}
+			}
+
+			&__link {
+				min-width: 240px;
+			}
+
+			&__container {
+				flex-direction: row;
+
+				.c-featured-content--type-b &{
+					flex-direction: row-reverse;
+				}
+			}
+		}
+
+		&.c-featured-content--type-c {
+			.c-featured-content {
+				&__content {
+					position: relative;
+				}
+
+				&-image{
+					position: absolute;
+				    right: 0;
+				    height: 100%;
+				}
+
+				&-copy {
+					min-height: 393px;
+				}
+
+				&-copy__container {
+					position: static;
+				}
+			}
+	    }
+	}
+}

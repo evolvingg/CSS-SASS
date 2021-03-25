@@ -1,0 +1,14 @@
+@mixin transformRotate($transform) {
+	-webkit-transform: rotate3d(0, 0, 1, $transform);
+	-moz-transform: rotate3d(0, 0, 1, $transform);
+	-ms-transform: rotate3d(0, 0, 1, $transform);
+	-o-transform: rotate3d(0, 0, 1, $transform);
+	transform: rotate3d(0, 0, 1, $transform);
+}
+@mixin transitions() {
+	-webkit-transition: transform .4s cubic-bezier(1, 0, 0, 1) .1s;
+	-moz-transition: transform .4s cubic-bezier(1, 0, 0, 1) .1s;
+	-ms-transition: transform .4s cubic-bezier(1, 0, 0, 1) .1s;
+	-o-transition: transform .4s cubic-bezier(1, 0, 0, 1) .1s;
+	transition: transform .4s cubic-bezier(1, 0, 0, 1) .1s;
+}

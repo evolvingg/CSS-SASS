@@ -1,0 +1,19 @@
+$tags: (
+    headingText: (
+        font: map-deep-get($fontVariable,'h2-mob','font'),
+        lh: map-deep-get($fontVariable,'h2-mob','lh'),
+        color: $brand-primary-color
+    ),
+    headingText-md: (
+        font: map-deep-get($fontVariable,'h2','font'),
+        lh: map-deep-get($fontVariable,'h2','lh')
+    ),
+    subHeadingText: (
+        font: map-deep-get($fontVariable,'h5','font'),
+        lh: map-deep-get($fontVariable,'h5','lh')
+    ),
+    subHeadingText-mob: (
+        font: map-deep-get($fontVariable,'h5-mob','font'),
+        lh: map-deep-get($fontVariable,'h5-mob','lh')
+    )
+);

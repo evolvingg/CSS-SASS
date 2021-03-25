@@ -1,0 +1,35 @@
+@media (min-width: $screen-sm) {
+    .c-search-listing-v2 {
+        margin-top: 50px;
+        .c-search-input-v2__inline {
+            margin-bottom: 21px;
+            .form-control {
+                padding: 14px 183px 14px 23px;
+            }
+        }
+        &__tab-wrapper {
+            margin-bottom: 35px;
+        }
+
+        &-tabs__list {
+            &-item {
+                margin: 0;
+            }
+
+            .o-btn {
+                margin-right: 17px;
+            }
+        }
+
+        &__item {
+            padding-bottom: 50px;
+        }
+        &__tags {
+            margin-top: 20px;
+        }
+        &__loadmore,
+        &-results__showmore {
+            margin-bottom: 54px;
+        }
+    }
+}

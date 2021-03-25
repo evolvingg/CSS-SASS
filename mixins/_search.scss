@@ -1,0 +1,83 @@
+@mixin search(){
+    .twitter-typeahead {
+        width: 100%;
+        position: relative;
+        input{
+            @include setFonts($fontVariable,'select');
+
+            color: $brand-secondary-color;
+            background: $color-white !important;
+            width: 100%;
+            border-radius: 0;
+            padding: 15px 152px 15px 23px;
+            height: 54px;
+
+            &::placeholder {
+                color: $brand-secondary-color;
+            }
+            &:-ms-input-placeholder {
+                color: $brand-secondary-color;
+            }
+                                
+            &::-ms-clear,
+            &::-ms-reveal{
+                display: none;
+                width: 0;
+                height: 0;
+            }
+            &:focus{
+                outline: none;
+            }
+
+            @media (min-width: $screen-md){
+                padding-right: 191px;
+            }
+        }
+    }
+    .o-btn{
+        border: 0;
+        font-size: map-deep-get($fontVariable, 'sh7', font);
+        line-height: map-get($fontVariable, 'btn-lh');
+
+        @media (min-width: $screen-md){
+            font-size: map-deep-get($fontVariable, 'h5-mob', font);
+        }
+
+        &--search, &--ternary{
+            @include o-btn--primary();
+            
+            top: 0;
+            right: 0;
+            position: absolute;            
+            min-width: 90px;
+
+            @media (min-width: $screen-md){
+                min-width: 129px;
+            }
+        }
+        &--primary{
+            top: 0;
+            right: 0;
+            position: absolute;
+            min-width: 90px;
+
+            @media (min-width: $screen-md){
+                min-width: 129px;
+            }
+        }
+    
+        &--reset, &-clear-search {
+            @include center(y);
+
+            background: transparent url(../svgs/stack/svg/sprite.stack.svg#close-green) no-repeat center/23px;
+            right: 110px;
+            width: 22px;
+            height: 22px;
+            font-size: 0;
+
+            @media (min-width: $screen-md){
+                right: 149px;
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+$sitemap: (
+    heading: (
+        color: $brand-primary-color,
+        font: map-deep-get($fontVariable, 'h2-mob', font),
+        lh: map-deep-get($fontVariable, 'h2-mob', lh)
+    ),
+    heading-desk: (
+        font: map-deep-get($fontVariable, 'h2', font),
+        lh: map-deep-get($fontVariable, 'h2', lh)
+    ),
+    section-heading: (
+        font: map-deep-get($fontVariable, 'txtlink', font),
+        lh: map-deep-get($fontVariable, 'txtlink', lh),
+        color: $brand-primary-color,
+        hvr-color: $brand-hover-color
+    ),
+    sub-section: (
+        font: map-deep-get($fontVariable, 'sh6', font),
+        lh: map-deep-get($fontVariable, 'sh6', lh),
+        color: $brand-secondary-color,
+        hvr-color: $brand-primary-color
+    )
+);
+

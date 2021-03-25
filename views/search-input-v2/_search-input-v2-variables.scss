@@ -1,0 +1,28 @@
+$searchInput :(
+    overlayBg: (
+        bg: $brand-primary-color,
+    ),
+    closeColor: $color-white,
+    heading:(
+        color: $color-white,
+    ),
+    heading-mob:(
+        font: map-deep-get($fontVariable,'h2-mob','font'),
+        lh: map-deep-get($fontVariable,'h2-mob','lh'),
+    ),
+    input: (
+        font: map-deep-get($fontVariable,'select','font'),
+        lh: map-deep-get($fontVariable,'select','lh'),
+        bg: $color-white,
+        color: $brand-secondary-color,
+    ),
+    button: (
+        font: map-get($fontVariable,'btn-txt'),
+        lh: map-get($fontVariable,'btn-lh'),
+        bg: $brand-secondary-color1,
+        color: $brand-secondary-color,
+    ),
+    suggestion:(
+        color: $color-white,
+    )
+)

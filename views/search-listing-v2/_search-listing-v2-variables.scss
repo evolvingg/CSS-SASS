@@ -1,0 +1,72 @@
+$searchResult:(
+    h1:(
+        font: map-deep-get($fontVariable,'h2','font'),
+        lh: map-deep-get($fontVariable,'h2','lh')
+    ),
+    h1-mob:(
+        font: map-deep-get($fontVariable,'h2-mob','font'),
+        lh: map-deep-get($fontVariable,'h2-mob','lh')
+    ),
+    input:(
+        border: $brand-input-border-color,
+        font: map-deep-get($fontVariable,'sh2-mob','font'),
+        lh: map-deep-get($fontVariable,'sh2-mob','lh'),
+        color: $brand-secondary-color,
+    ),
+    searchBtn:(
+        bg: $brand-primary-color,
+        font: map-deep-get($fontVariable,'sh2-mob','font'),
+        lh: map-deep-get($fontVariable,'sh2-mob','lh'),
+        color: $color-white,
+    ),
+    tabs:(
+        font: map-deep-get($fontVariable,'tag-txt','font'),
+        lh: map-deep-get($fontVariable,'tag-txt','lh'),
+        arrowSize: 7px,
+        arrowColor: $brand-primary-color,
+    ),
+    tags:(
+        font: map-deep-get($fontVariable,'tag-txt','font'),
+        lh: map-deep-get($fontVariable,'tag-txt','lh'),
+        arrowSize: 7px,
+        arrowColor: $brand-primary-color,
+    ),
+    suggestions:(
+        font: map-deep-get($fontVariable,'txtlink','font'),
+        lh: map-deep-get($fontVariable,'txtlink','lh'),
+        color: $brand-primary-color,
+        bg: $color-white,
+    ),
+    resultHeading:(
+        font: map-deep-get($fontVariable,'h3','font'),
+        lh: map-deep-get($fontVariable,'h3','lh'),
+        color: $brand-primary-color,
+    ),
+    resultHeading-mob:(
+        font: map-deep-get($fontVariable,'h3-mob','font'),
+        lh: map-deep-get($fontVariable,'h3-mob','lh'),
+    ),
+    resultDesc: (
+        font: map-deep-get($fontVariable,'txtlink','font'),
+        lh: map-deep-get($fontVariable,'txtlink','lh'),
+        color: $brand-secondary-color,
+    ),
+    resultDesc-mob: (
+        font: map-deep-get($fontVariable,'sh5-mob','font'),
+        lh: map-deep-get($fontVariable,'sh5-mob','lh'),
+    ),
+    resultLink:(
+        font: map-deep-get($fontVariable,'sh6','font'),
+        lh: map-deep-get($fontVariable,'sh6','lh'),
+        color: $brand-primary-color,
+    ),
+    resultLink-mob:(
+        font: map-deep-get($fontVariable,'tag-txt','font'),
+        lh: map-deep-get($fontVariable,'tag-txt','lh'),
+    ),
+    resultTag:(
+        font: map-deep-get($fontVariable,'txtlink','font'),
+        lh: map-deep-get($fontVariable,'txtlink','lh'),
+        color: $brand-primary-color,
+    )
+)

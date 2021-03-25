@@ -1,0 +1,31 @@
+@media(min-width: $screen-md) {
+	.c-reviews {
+		.rr-product-reviews {
+			.averageRingBlock {
+				padding-top: 53px;
+				h3{
+					font-size: map-deep-get($reviews,'averageRingBlock', heading-font);
+                	line-height: map-deep-get($reviews,'averageRingBlock', heading-lh);
+				}
+			}
+			.write-review-btn {
+				top: 30%;
+			}
+			.review-block {
+				padding: 55px 0px 70px;
+				flex-flow: row;
+
+				h3 {
+					font-size: map-deep-get($reviews,'reviews-container-block', heading-font);
+                	line-height: map-deep-get($reviews,'reviews-container-block', heading-lh);
+				}
+
+				.rr-comments {
+					font-size: map-deep-get($reviews,'reviews-container-block', reviwer-comments-font-desk);
+                	line-height: map-deep-get($reviews,'reviews-container-block', reviwer-comments-lh-desk);
+					margin-bottom: 42px;
+				}
+			}
+		}
+	}
+}

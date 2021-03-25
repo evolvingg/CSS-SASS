@@ -1,0 +1,56 @@
+// sass-lint:disable-all
+@mixin font-setup($fontfamily, $weight:normal, $style:normal) {
+    
+    	font-family: $fontfamily;
+    
+    	@if $weight != '' {
+    
+    		font-weight: $weight;
+    	}
+    
+    	@if $style != '' {
+    
+    		font-style: $style;
+    
+    	}
+    }
+    
+    @mixin font-base($weight:normal, $style:normal, $hierarchy: true) {
+    	@each $class, $map in $font-guide {
+        @if $class == default {
+            font-weight: map-deep-get($map, font-weight, $weight);
+            font-style: $style;
+            $font-family: map-get($map, font-family) !global;
+            $font-family-var: map-get($map, font-family-var) !global;
+            @content;
+        } @else {
+          @if $hierarchy == true {
+            #{$class} & { 
+              font-weight: map-deep-get($map, font-weight, $weight);
+              font-style: $style;
+              $font-family: map-get($map, font-family) !global;
+              $font-family-var: map-get($map, font-family-var) !global;
+              @content;
+            }
+          } @else {
+            &#{$class} { 
+              font-weight: map-deep-get($map, font-weight, $weight);
+              font-style: $style;
+              $font-family: map-get($map, font-family) !global;
+              $font-family-var: map-get($map, font-family-var) !global;
+              @content;
+            }
+          }
+        }
+      }
+    }
+    
+    
+    @mixin fontSize($property) {
+        font-size: map-deep-get($fontVariable, $property,'font');
+        line-height: map-deep-get($fontVariable, $property,'lh');
+    };
+    @mixin setFonts($map,$layout){
+      font-size: map-deep-get($map, $layout,'font');
+      line-height: map-deep-get($map, $layout,'lh');
+    }

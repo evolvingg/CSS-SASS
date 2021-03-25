@@ -1,0 +1,58 @@
+@import "tags-variables";
+
+.c-tags {
+    svg {
+        display: block;
+    }
+
+    @include container;
+
+    &__wrapper {
+        @include componentVerticalSpace();
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    &-heading__text {
+        @include setFonts($tags, "headingText");
+
+        text-align: center;
+        padding-bottom: 21px;
+        color: map-deep-get($tags, "headingText", color);
+        display: block;
+        margin-top: 0;
+    }
+
+    &-sub-heading__text {
+        @include setFonts($tags, "subHeadingText-mob");
+
+        margin-bottom: 8px;
+        display: block;
+        text-align: center;
+    }
+
+    &-list {
+        @include row();
+
+        list-style: none;
+        padding: 0 $gutter-width;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        &-item {
+            margin-bottom: 15px;
+        }
+
+        &-item__link {
+            @include tag-tab-btn();
+
+            display: block;
+        }
+    }
+
+    @import "tags__desktop";
+}

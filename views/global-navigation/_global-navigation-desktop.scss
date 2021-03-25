@@ -1,0 +1,159 @@
+@media (min-width: $screen-md) {
+    .c-global-navigation {
+        &__navigation {
+            display: inline-block;
+            vertical-align: top;
+        }
+        &__logo {
+            width: 170px;
+            height: 54px;
+        }
+    }
+    .o-navbar {
+        padding: 21px 0 20px;
+        &-toggle,
+        &-back{
+            display: none;
+        }
+
+        &-tier1-scroller-wrapper {
+            position: static;
+            display: inline-block;
+            vertical-align: top;
+            width: 100%;
+            overflow: visible !important;
+            margin-left: 0;
+            top: 93px;
+        }
+
+        &-tier1-wrapper {
+            padding: 13px 0 10px;
+            position: relative;
+            width: auto;
+
+            >li {
+                text-align: left;
+                display: inline-block;
+                vertical-align: top;
+                padding-right: 10px;
+                border-bottom: 0;
+                margin: 0;
+                line-height: 1;
+
+                &.active {
+                    > .o-navbar-label {
+                        svg {
+                            transform: rotate(180deg);
+                        }
+                    }
+                }
+
+                .o-navbar-label {
+                    font-size: map-deep-get($navigationVar, 'menuTier1','font-desk');
+                    color: map-deep-get($navigationVar, 'menuTier1','color');
+                    display: inline-block;
+                    padding: 5px;
+                    width: auto;
+                    font-weight: normal;
+                    &:after {
+                        position: absolute;
+                        width: 2px;
+                        height: 12px;
+                        content: '';
+                        left: 0;
+                        top: 28px;
+                        display: none;
+                    }
+
+                    @media (max-width: 1024px) and (orientation: landscape){
+                        font-size: map-deep-get($navigationVar, 'menuTier1','font-tab-landscape');
+                    }
+                }
+            }
+        }
+
+        &-marker {
+            float: none;
+            margin-top: 0;
+            transform: rotate(0deg);
+        }
+
+        &-tier2-wrapper {
+            position: static;
+            padding-top: 0;
+            position: absolute;
+            min-width: 347px;
+            top: calc(100% - 3px);
+            &.opened {
+                display: block !important;
+            }
+
+            .o-navbar-dropdown-menu {
+                padding:0 5px 34px;
+                &.split-list{
+                    width: 677px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    > li{
+                        width: 320px;
+                        margin-right: 27px;
+                        &:nth-child(2n+1){
+                            margin-right: 0;
+                        }
+                    }
+                }
+                > li {
+                    .o-navbar-label {
+                        border: 0;
+                        padding: 7px 0;
+                    }
+                }
+            }
+        }   
+
+        &-dropdown-menu {
+            &:before {
+                background: map-deep-get($navigationVar, 'overlay','bg');
+                content: "";
+                display: block;
+                width: 5000px;
+                height: 100%;
+                left: -2500px;
+                top: 0;
+                position: absolute;
+            }
+        }
+
+        &-tier2-item {
+            border: 0;
+            margin: 0;
+
+            &:last-child{
+                border-bottom: 0;
+            }
+        }
+
+        &-overlay {
+            position: relative;
+            left: 0;
+            width: 100%;
+            top: 0;
+            z-index: 2;
+            background-color: transparent;
+            min-height: auto;
+            .o-navbar{
+                &-custom-module-menu{
+                    margin-right: 23px;
+                    max-width: 320px;
+                    display: inline-block;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                }
+                &-label{
+                    border-top: 0;
+                }
+            }
+        }
+    }
+}

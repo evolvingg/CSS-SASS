@@ -1,0 +1,13 @@
+@media (min-width: $screen-md) {
+
+    .o-text__heading-1 {
+        @include setFonts($sitemap, 'heading-desk');
+
+        margin-bottom: 50px;
+    }
+
+    .c-sitemap__pages-column {
+        margin-bottom: 66px;
+        width: 25%;
+    }
+}

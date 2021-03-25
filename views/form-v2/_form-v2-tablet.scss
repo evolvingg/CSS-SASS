@@ -1,0 +1,45 @@
+@media (min-width: $screen-sm){
+	.form-v2 {
+		button {
+			margin: 18px 15px 57px;
+		}
+
+		.textfield,
+	    .c-control-label,
+	    .dropdown,
+	    .textarea,
+	    .emailaddress,
+	    .date {
+	    	padding: 0 15px;
+	    }
+
+	    .c-form-checkbox {
+	    	.help-block p{
+	    		margin-left: 15px;
+	    	}
+	    }
+
+	    .form-group {
+	    	margin: 0 -15px 18px;
+
+	    	&.form-button {
+	    		margin: 0 -15px 18px;
+	    	}
+	    }
+
+	    .dropdown {
+	    	&:before {
+	    		left: auto;
+                right: 30px;
+	    	}
+	    }
+
+	    .select.form-control {
+	    	background-position: 90% center;
+
+	    	&.form-input-valid:not(.input-submit) {
+	    		background-position: 90% center;
+	    	}
+	    }
+	}
+}

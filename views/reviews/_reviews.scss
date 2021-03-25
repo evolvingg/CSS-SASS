@@ -1,0 +1,534 @@
+@import '_reviews-variables';
+
+// scss-lint:disable SelectorDepth
+// scss-lint:disable NestingDepth
+.c-reviews {
+    svg {
+        display: block;
+    }
+    
+    .rr-widget-container {
+        @include container;
+
+        @include componentVerticalSpace();
+
+        .helpful,
+        .un-helpful {
+            //@include fontSize(default-font);
+
+            font-weight: 700;
+        }
+
+        .helpful {
+            background-position: 0 -90px;
+        }
+
+        .un-helpful {
+            background-position: 0 -117px;
+        }
+
+        .paging {
+            border-top: 2px dashed $brand-secondary-color1;
+            margin: 0 -15px;
+            width: auto;
+            padding-top: 47px;
+            padding-bottom: 0;
+
+            .paging-links {
+                a.set-link-show,
+                a.set-last-link{
+                    display: inline-flex !important;
+                }
+    
+                .rr-paging-data {
+                    display: none !important;
+                }
+            }
+
+            span {
+                position: relative;
+                top: -9px;
+
+                a {
+                    height: 46px;
+                    border: 1px solid black;
+                    padding: 13px;
+                }
+            }
+
+            .first {
+                margin-left: 19px;
+            }
+
+            .prev {
+                margin-left: 15px;
+            }
+
+            .next {
+                margin-right: 15px;
+            }
+
+            .last {
+                margin-left: 19px;
+            }
+        }
+    }
+
+    .rr-product-reviews {
+        color: $color-black;
+
+        h2 {
+            display: none;
+        }
+
+        .averageRingBlock {
+            &::before {
+                @include center(x);
+
+                content: '';
+                background-color: map-deep-get($reviews,'averageRingBlock', background);
+                z-index: 0;
+                top: 0;
+                width: 100vw;
+                height: 100%; 
+            }
+
+            > * {
+                z-index: 1;
+                position: relative;
+            }
+
+            text-align: center;
+            padding-top: 35px;
+
+            .average-rating {
+
+                .aggregateRating {
+                    img {
+                        max-width: 97px;
+                    }
+                }
+
+            }
+           
+            h3 {
+                font-size: map-deep-get($reviews,'averageRingBlock', heading-font-mob);
+                line-height: map-deep-get($reviews,'averageRingBlock', heading-lh-mob);
+                color: map-deep-get($reviews,'averageRingBlock', color);
+
+                padding-bottom: 27px;
+
+                @media (min-width: $screen-sm) {
+                    //@include fontSize(h3);
+
+                    padding-bottom: 20px;
+                }
+                @media (min-width: $screen-md) {
+                    letter-spacing: 2px;
+                }
+            }
+
+            .total-reviews {
+                //@include o-text__heading-4;
+
+                padding-bottom: 30px;
+
+                @media (min-width: $screen-sm) {
+                    padding: 0;
+                }
+
+                .aggRtng {
+                    background: none;
+                    margin: 0;
+                    padding-left: 10px;
+
+                    &::after {
+                        content: '|';
+                        position: absolute;
+                        left: 61%;
+
+                        @media (max-width: $screen-sm - 1) and (orientation: landscape) {
+                            left: 56%;
+                        }
+
+                        @media (min-width: $screen-sm) {
+                            left: 135px;
+                        }
+                    }
+
+                }
+
+                @media (max-width: $screen-sm - 1) {
+                    width: auto;
+                    display: inline-block;
+                }
+            }
+        }
+
+        .total-reviews,
+        .total-reviews span,
+        .aggRtng,
+        .tRtng {
+            font-size: map-deep-get($reviews,'averageRingBlock', avg-text-font);
+            line-height: map-deep-get($reviews,'averageRingBlock', avg-text-lh);
+            color: map-deep-get($reviews,'averageRingBlock', color);  
+        }
+
+        .write-review-btn {
+            @include o-btn--primary;
+
+            margin: 0 auto;
+            top: 0;
+            right: 0;
+        }
+
+        .reviews-container {
+            color: $color-black;
+            display: flex;
+            flex-flow: column;
+
+            .rating-container {
+                .aggRtng {
+                    vertical-align: top;
+                }
+            }
+        }
+
+        .review-block {
+            border-top: 1px solid $review-divider-color;
+            display: flex;
+            flex-flow: column;
+            padding: 25px 0 40px;
+
+            h3 {
+                font-size: map-deep-get($reviews,'reviews-container-block', heading-font-mob);
+                line-height: map-deep-get($reviews,'reviews-container-block', heading-lh-mob);
+                color: map-deep-get($reviews,'reviews-container-block', heading-color);
+                margin-bottom: 0;
+                order: 1;
+            }
+
+            .reviewer-name,
+            .reviewDate {
+                font-size: map-deep-get($reviews,'reviews-container-block', reviewer-font);
+                line-height: map-deep-get($reviews,'reviews-container-block', reviewer-font-lh);
+                color: map-deep-get($reviews,'reviews-container-block', text-color);
+                font-weight: 700;
+            }
+
+            .reviewer-name{
+                order: 2;
+                margin-bottom: 12px;
+            }
+
+            .reviewDate {
+                text-align: right;
+                margin-top: 5px;
+            }
+
+            .rr-comments {
+                font-size: map-deep-get($reviews,'reviews-container-block', reviwer-comments-font);
+                line-height: map-deep-get($reviews,'reviews-container-block', reviwer-comments-font);
+                color: map-deep-get($reviews,'reviews-container-block', text-color);
+                margin: 5px 0 18px;
+            }
+        }
+    }
+
+    &.rr-widget-container {
+        width: 100%;
+
+        &.rr-no-reviews {
+            .sort-container{
+                display: none;
+            }
+        }
+
+        .feedback-container {
+            color: $color-black;
+            margin-bottom: 0;
+            display: flex;
+            width: 100%;
+            flex-flow: row;
+
+            @media (min-width: $screen-md) {
+                width: 70%;
+
+                .ie & {
+                    width: 84%;
+                }
+            }
+
+            dt {
+                font-weight: 400;
+                width: 33.33%;
+                padding-right: 7.5px;
+                margin-bottom: 0;
+
+                @media (min-width: $screen-sm) {
+                    padding-right: 15px;
+                }
+
+                @media (min-width: $screen-md) {
+                    width: auto;
+                    margin-bottom: 0;
+                }
+            }
+
+            dd {
+                width: 34.33%;
+                padding-left: 7.5px;
+
+                @media (min-width: $screen-sm) {
+                    padding-left: 15px;
+                }
+
+                @media (min-width: $screen-md) {
+                    float: none;
+                }
+
+                &:first-child {
+                    padding-right: 7.5px;
+                    text-align: center;
+
+                    @media (min-width: $screen-sm) {
+                        padding-right: 15px;
+                    }
+
+                }
+
+                &:last-child {
+                    transform: translateY(2px);
+                    background: none;
+                }
+            }
+
+            .report-btn {
+                text-decoration: underline;
+                color: map-deep-get($reviews,'averageRingBlock', color);
+                font-weight: 700;
+            }
+        }
+
+        .socialBtn {
+            color: $color-black;
+
+            @media (min-width: $screen-sm) and (max-width: $screen-md) {
+                bottom: -22px;
+            }
+        }
+
+        .review-block {
+
+            .rr-col-1 {
+                padding-right: 7.5px;
+                width: 67.66%;
+                display: flex;
+                flex-flow: column;
+                order: 1;
+                padding-left: 0;
+
+                @media (min-width: $screen-sm) {
+                    width: 32.67%;
+                    padding-right: 15px;
+
+                    .ie & {
+                        width: 41%;
+                    }
+                }
+
+                @media (min-width: $screen-md) {
+                    width: 24.33%;
+                }
+            }
+
+            .rr-col-2 {
+                width: 100%;
+                padding: 0;
+                order: 3;
+
+                @media (min-width: $screen-sm) {
+                    width: 84.33%;
+                }
+
+                @media (min-width: $screen-md) {
+                    width: 60.21%;
+                    padding: 0 15px;
+                }
+
+                .rr-review-response {
+                    padding-top: 30px;
+
+                    h5 {
+                        //@include fontSize(h4);
+                    }
+
+                    .rr-response {
+                        border-top: 2px dashed $brand-secondary-color1;
+                    }
+                }
+            }
+
+            .rr-col-3 {
+                //@include fontSize(default-font);
+
+                width: 30.34%;
+                padding: 19px 0 0 7.5px;
+                order: 2;
+                position: absolute;
+                right: calc(0% + 15px);
+
+                @media (min-width: $screen-sm) {
+                    position: relative;
+                    order: 3;
+                    width: 39%;
+                    right: 0;
+                    padding-left: 15px;
+                    padding-top: 0;
+                }
+
+                @media (min-width: $screen-md) {
+                    width: 15.66%;
+                }
+            }
+
+            .rating-container {
+                order: 3;
+                margin-bottom: 0;
+
+                .aggRtng {
+                    //@include fontSize(cta);
+
+                    letter-spacing: 1.7px;
+                }
+
+                .aggregateRating {
+                    img {
+                        max-width: 97px;
+                    }
+
+                    @media (min-width: $screen-md) {
+                        margin-top: 0;
+                    }
+                }
+            }
+        
+        }
+
+        .sort-container {
+            display: flex;
+            width: 100%;
+            padding: 21px 0 24px;
+            justify-content: center;
+
+            @media (min-width: $screen-sm) {
+                padding-bottom: 16px;
+                justify-content: flex-end;
+                margin-left: auto;
+            }
+
+            @media (min-width: $screen-md) {
+                padding: 20px 0 40px;
+            }
+
+            span {
+                //@include fontSize(cta-small);
+
+                color: $color-black;
+                letter-spacing: 2px;
+                display: block;
+                padding: 14px 7.5px 10px 0;
+                text-align: center;
+                width: 33.33%;
+                @media (min-width: $screen-sm) {
+                    padding-right: 15px; 
+                    width: 18.666%;
+                    padding-bottom: 29px;
+                }
+                @media (min-width: $screen-md) {
+                    width: 14%;
+                    padding-top: 17px;
+                    padding-bottom: 0;
+                    padding-right: 34px;
+                }
+            }
+
+            select {
+                @include dropdown;
+
+                width: 66.33%;
+                letter-spacing: 1.5px;
+                margin-left: 7.5px;
+                font-weight: 700;
+                max-width: none;
+
+                @media (min-width: $screen-sm) {
+                    min-width: 0;
+                    width: 39.33%;
+                }
+
+                @media (min-width: $screen-md) {
+                    margin-left: 15px;
+                    width: 22.89%;
+                }
+            }
+        }
+
+        .paging a {
+            height: 28px;
+
+            &.next,
+            &.last,
+            &.next.disable,
+            &.last.disable {
+                background-position-x: -2px;
+            }
+
+            &.prev,
+            &.first,
+            &.prev.disable,
+            &.first.disable {
+                background-position-x: 2px;
+            }
+
+            &.current-page {
+                //@include font-base(light, normal, true);
+                //background-color: $color-black;
+            }
+        }
+    }
+
+    p {
+        color: $color-black;
+    }
+
+    .rr-widget-container {
+        .review-rightBlock {
+            @media only screen and (max-width: $screen-md) and (min-width: $screen-sm) {
+                width: 69%;
+            }
+        }
+
+        .review-leftBlock {
+            @media only screen and (max-width: $screen-md) and (min-width: $screen-sm) {
+                width: 30%;
+            }
+        }
+
+        .report-btn {
+            @media only screen and (max-width: $screen-md) and (min-width: $screen-sm) {
+                background-position: 10px -149px;
+                padding-left: 30px;
+            }
+        }
+    }
+
+    .rr-button:focus,
+    .rr-button:hover,
+    .rr-loadmore-btn:hover {
+        background: $color-black;
+    }
+}
+
+@import '_reviews-tablet';
+@import '_reviews-desktop';

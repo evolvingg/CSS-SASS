@@ -1,0 +1,64 @@
+@import 'breadcrumb-variables';
+
+.c-breadcrumb {
+    padding: 0;
+    display: none;
+
+    svg {
+        display: inline-block;
+    }
+
+    @media (min-width: $screen-md) {
+        display: block;
+    }
+
+    &.products-page {
+        .c-breadcrumb__list {
+            @media (min-width: $screen-sm) {
+                padding-bottom: 29px;
+            }
+        }
+    }
+
+    .c-svg.arrow-right {
+        width: 8px;
+        height: 8px;
+        transform: rotate(270deg);
+        margin: 1px;
+    }
+}
+
+.c-breadcrumb__list {
+    @include setFonts($breadcrumb,'linkText');
+
+    padding: 0;
+    margin-bottom: 0;
+
+    @media (min-width: $screen-md) {
+        padding: 14px 0;
+    }
+
+    .c-breadcrumb {
+
+        &__item {
+            display: inline-block;
+
+            &.is-active {
+                color: map-deep-get($breadcrumb, 'linkText', active-link-color);
+
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        &__link {
+            color: map-deep-get($breadcrumb, 'linkText', color);
+            font-weight: 400; 
+        }
+    }
+}

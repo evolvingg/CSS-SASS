@@ -1,0 +1,13 @@
+@media (min-width: $screen-sm) {
+    .c-expandcollapse {
+        &__header {
+            .hidden-xs {
+                display: none !important;
+            }
+
+            .visible-xs {
+                display: block !important;
+            }
+        }
+    }
+}

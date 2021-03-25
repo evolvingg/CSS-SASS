@@ -1,0 +1,26 @@
+@media (min-width: $screen-md){
+    .c-page-listing-v2{
+        margin-bottom: 25px;
+        &-listing{
+            &-item{
+                &__title-link{
+                    @include setFonts($pageListing,'heading');
+
+                    margin-bottom: 6px;
+                }
+                &-copy-text-link{
+                    @include setFonts($pageListing,'subheading');
+
+                    margin-bottom: 2px;
+                }
+                &__long-copy-link{
+                    p{
+                        @include setFonts($pageListing,'desc');
+
+                        margin-bottom: 7px;
+                    }
+                }
+            }
+        }
+    }
+}

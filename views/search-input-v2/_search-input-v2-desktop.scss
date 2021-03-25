@@ -1,0 +1,26 @@
+@media (min-width: $screen-md) {
+        .c-secondary-nav{
+            .c-search-input-v2{
+                &__search-handler{
+                    bottom: -56px;
+                    right: 15px;
+                }
+                &__search-overlay {
+                    .o-modal-header {
+                        .o-btn--search-close {
+                            top: 40px;
+                        }
+                    }
+                    .c-search-input-v2 {
+                        &__wrapper {
+                            margin-top: 153px;
+            
+                            .c-search-input-v2__header h2 {
+                                padding-bottom: 36px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+}

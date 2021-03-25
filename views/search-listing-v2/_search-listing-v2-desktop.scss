@@ -1,0 +1,61 @@
+@media (min-width: $screen-md) {
+    .c-search-listing-v2 {
+        &__label-wrapper {
+            @include setFonts($searchResult,'h1');
+
+            margin-bottom: 36px;
+        }
+        .c-search-input-v2__inline {
+            margin-bottom: 34px;
+
+            .tt-menu {
+                padding: 19px;
+            }
+        }
+        &__tab-wrapper {
+            margin-bottom: 84px;
+        }
+
+        &-tabs__list {
+
+            .o-btn {
+                margin-right: 26px;
+            }
+        }
+
+        &__item {
+            padding-bottom: 54px;
+
+            &:last-child{
+                padding-bottom: 35px;
+            }
+            &-details {
+                .o-text__heading-3 {
+                    @include setFonts($searchResult,'resultHeading');
+                    margin-bottom: 2px;
+                }
+            }
+            &-copy-desc {
+                @include setFonts($searchResult,'resultDesc');
+
+                margin-bottom: 13px;
+            }            
+        }
+        &__tags {
+                margin-top: 29px;
+        }
+        &__loadmore,
+        &-results__showmore {
+            margin-bottom: 75px;
+        }
+        .c-breadcrumb__list {
+            .c-breadcrumb__item {
+                @include setFonts($searchResult,'resultLink');
+            }
+
+            .arrow-right {
+                margin: 7px 3px;
+            }
+        }
+    }
+}

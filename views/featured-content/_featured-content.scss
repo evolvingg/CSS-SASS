@@ -1,0 +1,100 @@
+@import '_featured-content-variables';
+
+.c-featured-content {
+    margin-bottom: 0;
+
+    svg {
+        display: block;
+    }
+
+	&--type-b {
+		background-color: map-deep-get($featured-content,'featuredBg', 'bgColor');
+	}
+	&__container {
+        overflow: hidden;
+        position: relative;  
+    }
+    &-copy {
+    	&__desc {
+    		@include setFonts($featured-content,'subHeadingMob');
+
+    		line-height: map-deep-get($featured-content,'subHeadingMob', lh);
+    		color: map-deep-get($featured-content,'subHeadingMob', color);
+    		font-weight: normal;
+    		margin-bottom: 10px;
+
+            .c-featured-content--type-c &{
+                color: $color-white;
+            }
+    	}
+
+    	&-headline {
+    		@include setFonts($featured-content,'headingTextMob');
+
+    		line-height: map-deep-get($featured-content,'headingTextMob', lh);
+    		font-weight: normal;
+    		margin-bottom: 10px;
+
+            a {
+                color: map-deep-get($featured-content,'headingText', color);
+                .c-featured-content--type-c &{
+                    color: $color-white;
+                }
+            }
+    	}
+
+    	&__teaser-description {
+    		@include setFonts($featured-content,'teaserDesc');
+
+    		line-height: map-deep-get($featured-content,'teaserDesc', lh);
+    		color: map-deep-get($featured-content,'teaserDesc', color);
+    		font-weight: normal;
+    		margin-bottom: 15px;
+
+            .c-featured-content--type-c &{
+                color: $color-white;
+            }
+    	}
+
+    	&__link {
+			display: inline-flex;
+            margin-bottom: 40px;
+            min-width: 224px;
+		}
+
+    	padding-top: 10px;
+    }
+
+    &-copy,
+    &-image {
+		@include setCols(6,12,6);
+
+        img {
+            display: block;
+            margin: 0 auto;
+        }
+    }
+
+	&-copy__container {
+    	@include container();
+
+    	display: flex;
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    &.c-featured-content--type-c {
+        background-color: map-deep-get($featured-content,'featuredBg', 'bgColorTypeC');
+
+        .c-featured-content-image {
+            padding: 0;
+        }
+    }
+
+    &.c-featured-content--type-b {
+        @include componentVerticalSpace();
+    }
+}
+
+@import '_featured-content-tablet';
+@import '_featured-content-desktop';

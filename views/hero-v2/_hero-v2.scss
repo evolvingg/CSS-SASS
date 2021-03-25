@@ -1,0 +1,87 @@
+@import '_hero-v2-variables';
+
+.c-hero-v2 {
+
+	svg {
+        display: block;
+    }
+    
+	&__wrapper {
+		position: relative;
+	}
+
+	&__image {
+		margin-bottom: 16px;
+		min-height: 211px;
+		text-align: center;
+
+		.c-hero-v2--type-a &{
+            margin-bottom: 15px;
+        }
+	}
+
+	&__copy {
+        @include container();
+
+        text-align: center;
+
+        .o-text__heading-1 {
+        	font-size: map-deep-get($heroV2,'headingText', font-mob);
+            line-height: map-deep-get($heroV2,'headingText', lh-mob);
+        	color: map-deep-get($heroV2,'headingText', color);
+        	padding-bottom: 18px;
+        }
+
+        .o-btn {
+        	display: inline-flex;
+        	min-width: 178px;
+        }
+	}
+
+	&--type-a{
+		.o-text__body {
+			font-size: map-deep-get($heroV2,'descriptionText', font-mob);
+    		line-height: map-deep-get($heroV2,'descriptionText', lh-mob);
+		}
+	}
+
+	&--type-b {
+		.o-text__body {
+			@include setFonts($heroV2,'subHeadingTextMob');
+
+			padding-bottom: 10px;   			
+			color: map-deep-get($heroV2,'subHeadingText', color);
+		}
+	}
+
+	&--video {
+		.c-hero-v2 {
+
+			&__wrapper {
+				.o-btn--play-video{
+					top: 78px;
+					transform: translate(-50%,0);
+				}
+			}
+			&-thumbnail img {
+				width: 100%;
+			}
+
+			&__copy {
+				padding-top: 15px;
+
+				.o-text__heading-1 {
+					@include setFonts($heroV2,'videoHeadingText');
+					
+            		line-height: map-deep-get($heroV2,'videoHeadingText', lh);
+					text-align: center;
+				}
+			}
+		}
+	}
+
+	@include componentVerticalSpace();	
+}
+
+@import '_hero-v2-tablet';
+@import '_hero-v2-desktop';

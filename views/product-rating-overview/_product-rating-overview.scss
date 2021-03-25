@@ -1,0 +1,212 @@
+@import '_product-rating-overview-variables';
+
+.c-product-rating-overview {
+    text-align: center;
+
+    svg {
+        display: block;
+    }
+    
+    @media (min-width: $screen-sm) {
+        text-align: left;
+    }
+
+    .rr-inline-widget {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        color: $color-white;
+        margin: 0 auto 17px;
+
+        @media (min-width: $screen-sm){
+            justify-content: flex-start;
+        }
+    }
+
+    .rr-widget-container {
+        .aggRtng,
+        .tRtng,
+        .tReview,
+        .wRtng,
+        .customReview {
+            @include setFonts($product-rating,'customReviewtext');
+
+            color: map-deep-get($product-rating,'customReviewtext', color);
+            line-height: map-deep-get($product-rating,'customReviewtext', lh);
+            font-weight: 700;
+        }
+
+        .customReview {
+            min-width: 0;
+
+            .ie & {
+                margin-top: 3px;
+            }
+        }
+
+        .wRtng {
+            display: block;
+            margin-left: 27px;
+
+            @media (min-width: $screen-sm) {
+                margin-left: 23px;
+            }
+
+            @media (min-width: $screen-md) {
+                margin-left: 32px;
+                
+            }
+        }
+
+        .aggRtng {
+            margin-left: 5px;
+        }
+    }
+
+    .aggregateRating img, 
+    .rr-widget-container .aggregateRating div {
+        padding-top: 0;
+        max-width: 97px;
+    }
+
+    .rr-no-reviews {
+        .customReview {
+            display: none;
+        }
+    }
+}
+
+.rr-widget-container {
+    line-height: 1;
+}
+
+.rr-widget-container.rr-inline-widget .aggregateRating {
+    vertical-align: middle;
+
+    @media (min-width: $screen-sm) {
+        margin-bottom: 0;
+    }
+
+    @media (min-width: $screen-md) {
+        margin-bottom: 4px;
+        vertical-align: bottom;
+    }
+}
+
+.rr-widget-container .customReview {
+    min-width: auto;
+    display: inline-block;
+    color: $color-black;
+}
+
+.rr-widget-container .wRtng {
+    
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.c-inline-review {
+    min-width: auto;
+    margin-bottom: 15px;
+
+    @media (min-width: $screen-sm){
+        margin-bottom: 20px;
+    }
+    .c-search-listing-v2 &{
+        margin-bottom: 10px;
+    }
+
+    .rr-widget-container {
+        @media (max-width: $screen-sm - 1) {
+            margin: 0;
+        }
+
+        .aggRtng,
+        .tRtng,
+        .tReview,
+        .wRtng,
+        &.rr-inline-widget {
+            //color: $color-black;
+            //font-weight: 700;
+        }
+
+        .aggRtng {
+            margin-left: 9px;
+
+            @media (max-width: $screen-sm) {
+                margin-left: 12px;    
+            }
+        }
+
+        .customReview {
+            @include setFonts($product-rating,'inlineReviewtext');
+
+            color: map-deep-get($product-rating,'customReviewtext', color);
+        }
+
+        .aggregateRating img, 
+        .rr-widget-container .aggregateRating div {
+            max-width: 92px;
+
+            @media (min-width: $screen-sm) {
+                margin-top: 5px;
+            }
+        }
+    }
+}
+
+.rr-no-reviews {
+    .customReview {
+        padding-left: 5px;
+    }
+
+    
+    .aggRtng {
+        display: none;
+    }
+}
+
+.c-product-listing-v2 {
+
+    .rr-widget-container {
+
+        .aggregateRating {
+
+            .ie &{
+                margin-top: 0;
+                margin-bottom: 4px;
+            }
+
+            img {
+                max-width: 92px;
+                
+                @media (min-width: $screen-sm) {
+                    margin-top: 0;
+                }
+
+                @media (min-width: $screen-md) {
+                    margin-top: 7px;
+                }
+            }
+        }
+    }  
+}
+
+.c-related-products {
+
+    .rr-widget-container {
+
+        .aggregateRating {
+            
+            .ie &{
+                margin-top: 0;
+                margin-bottom: 4px;
+            }
+
+        }
+    }
+}
+
+@import '../reviews/write-review-overlay';

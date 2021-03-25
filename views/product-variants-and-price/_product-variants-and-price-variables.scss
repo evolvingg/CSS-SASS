@@ -1,0 +1,7 @@
+$productVariants: (
+    lbl-stl: (
+        br-color: $brand-secondary-color,
+        font: map-deep-get($fontVariable, 'select', font),
+        lh: map-deep-get($fontVariable, 'select', lh)
+    )
+);

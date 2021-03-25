@@ -1,0 +1,43 @@
+$quickView: (
+    bg: $brand-secondary-color3,
+    title: (
+        font: map-deep-get($fontVariable,'tag-txt','font'),
+        lh: map-deep-get($fontVariable,'tag-txt','lh'),
+        color: $brand-primary-color,
+    ),
+    title-desktop:(
+        font: map-deep-get($fontVariable,'sh6-mob','font'),
+        lh: map-deep-get($fontVariable,'sh6-mob','lh'),
+    ),
+    heading: (
+        font: map-deep-get($fontVariable,'select','font'),
+        lh: map-deep-get($fontVariable,'select','lh'),
+        color: $brand-primary-color,
+    ),
+    heading-desktop:(
+        font: map-deep-get($fontVariable,'sh2','font'),
+        lh: map-deep-get($fontVariable,'sh2','lh'),
+    ),
+    readmore: (
+        font: map-deep-get($fontVariable,'txtlink','font'),
+        lh: map-deep-get($fontVariable,'txtlink','lh'),
+        color: $brand-primary-color,
+    ),
+    desc: (
+        font: map-deep-get($fontVariable,'default-font','font'),
+        lh: map-deep-get($fontVariable,'default-font','lh'),
+        color: $brand-secondary-color,
+    ),
+    desc-mob:(
+        font: map-deep-get($fontVariable,'sh6-mob','font'),
+        lh: map-deep-get($fontVariable,'sh6-mob','lh'),
+    ),
+    select: (
+        font: map-deep-get($fontVariable,'select','font'),
+        lh: map-deep-get($fontVariable,'select','lh'),
+        color-border: $brand-secondary-color,
+    ),
+    cross: (
+        colorFill: $brand-primary-color,
+    )
+);

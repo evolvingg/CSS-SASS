@@ -1,0 +1,143 @@
+@mixin o-btn {
+
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 0;
+    padding: 16px 24px 15px;
+    width: auto;
+}
+
+@mixin o-btn--primary {
+    @include o-btn;
+
+    font-size: map-deep-get($fontVariable, 'h5-mob', font);
+    background: $brand-primary-color;
+    border: none;
+    min-height: 54px;
+    color: $color-white;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background: $brand-hover-color;
+        color: $color-white;
+        text-decoration: none;
+    }
+}
+
+@mixin o-btn--secondary {
+    @include o-btn;
+    
+    font-size: map-deep-get($fontVariable, 'sh1-mob', font);
+    border: 2px solid $brand-primary-color;
+    color: $brand-primary-color;
+    background-color: transparent;
+    min-width: 132px;
+    padding: 11px 18px 10px;
+    min-height: 45px;
+
+    &:focus,
+    &:active,
+    &:hover {
+        background-color: $brand-primary-color;
+        color: $color-white;
+    }
+}
+
+.o-btn {
+    @include o-btn;
+
+    &--primary {
+        @include o-btn--primary;
+    }
+
+    &--secondary {
+        @include o-btn--secondary;
+    }
+}
+
+@mixin dropdown{
+    @include fontSize(select);
+
+    border:1px solid $brand-secondary-color;
+    border-width: 1px 0;
+    color: $brand-secondary-color;
+    width: 100%;
+    appearance: none;
+    padding: 15px 25px 15px 6px;
+    border-radius: 0;
+    cursor: pointer;
+    margin-bottom: 5px;
+    background: url(../svgs/stack/svg/sprite.stack.svg#down) no-repeat right center/24px 16px;
+    
+    option{        
+        @include fontSize(select);
+    }
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+.o-filter-dropdown,
+.o-dropdown{
+    @include dropdown;
+}
+
+@mixin txt-link(){
+    @include setFonts($fontVariable,'txtlink');
+    text-decoration:underline;
+    color: $brand-primary-color;
+    font-weight: 700;
+
+    &:hover{
+        color: $brand-hover-color;
+    }
+}
+
+@mixin tag-tab-btn() {
+    @include setFonts($fontVariable, 'tag-txt');
+
+    border-radius: 0;
+    padding: 9px 7.5px;
+    margin: 0 7.5px;
+    text-decoration: none;
+    color: $color-white;
+    background-color: $brand-primary-color;
+    font-weight: 700;
+
+    &:hover,
+    &:focus,
+    &:active {
+        text-decoration: none;
+        color: $color-white;
+        background-color: $brand-hover-color;
+    }
+}
+
+.o-btn--play-video {	
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    cursor: pointer;
+    width: 55px;
+    height: 55px;
+    background: transparent;
+    border: none;
+    transform: translate(-50%, -50%);
+
+    svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 55px;
+        height: 55px;
+        pointer-events: none;
+    }
+
+}

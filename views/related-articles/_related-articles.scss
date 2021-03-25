@@ -1,0 +1,61 @@
+@import '_related-articles-variables';
+
+/* CSS implementation */
+.c-related-articles {
+    margin-bottom: 50px;
+
+    svg {
+        display: block;
+    }
+    
+    &-heading {
+        text-align: center;
+        .o-text__heading-2 {
+            color: map-get($relatedColors, headingColor);
+            @include fontSize(h1-mob);
+            margin-bottom: 25px;
+        }
+    }
+    &-item {
+        width: 100%;
+        padding: 0 15px;
+        &-content {
+            padding: 15px 5px 0 0;
+            .o-text__heading-2, .o-text__heading-2 a {
+                @include fontSize(sh5);
+                color: map-get($relatedColors, headingColor);
+                line-height: $subheadingLineHeight;
+                margin-bottom: 5px;
+            }
+            .o-text__heading-3 {
+                margin-bottom: 3px;
+                @include fontSize(sh6-mob);
+                font-weight: bold;
+            }
+            &__desc {
+                @include fontSize(sh5-mob);
+            }
+        }
+
+        img {
+            margin: 0 auto;
+        }
+    }
+
+    .slick-prev,
+    .slick-next {
+        left: 2px;
+        top: 28%;
+        z-index: 1;
+        width: 35px;
+        height: 35px;
+        background-size: 35px 35px;
+    }
+    .slick-next {
+        background-position: top right;
+        right: 2px;
+        left: auto;
+    }
+}
+@import '_related-articles-tablet';
+@import '_related-articles-desktop';

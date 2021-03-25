@@ -1,0 +1,168 @@
+@import "_product-images-variable";
+
+.c-product-images {
+    margin: 0 -15px;
+    position: relative;
+    z-index: 1;
+    img{
+        display: block;
+        margin: 0 auto;
+    }
+
+    svg {
+        display: block;
+    }
+
+    &__modal {
+        z-index: 9999;
+
+        .o-btn--close {
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            margin: 0;
+            display: block !important;
+            visibility: visible !important;
+            width: 35px;
+            height: 35px;
+            background: transparent url('../images/crossicon.png') no-repeat center;
+            background-size: 35px;
+            z-index: 1;
+            padding: 0;
+            border: 0;
+            svg{
+                display: none;
+            }
+        }
+    }
+
+    &__wrapper {
+        padding: 0;
+    }
+    .slick-track{
+        z-index: 2;
+    }
+    &-thumbnail {
+        .slick-arrow {
+            top: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 999;
+            background-size: 35px;
+            width: 35px;
+            height: 35px;
+    
+            &.slick-next {
+                right: -3px;
+            }
+    
+            &.slick-prev {
+                left: -3px;
+            }
+        }
+    }
+
+    &-nav {
+        position: static;
+
+        .slick-list {
+            visibility: hidden;
+            display: none;
+        }
+
+        .slick-dots {
+            position: relative;
+            bottom: 0;
+            list-style: none;
+            display: block;
+            text-align: center;
+            padding: 0;
+            margin: 7px 0 15px;
+            width: 100%;
+
+            li {
+                position: relative;
+                display: inline-block;
+                margin: 0 2px;
+                cursor: pointer;
+
+                button {
+                    height: 6px;
+                    width: 6px;
+                    outline: none;
+                    font-size: 0;
+                    background-color: map-deep-get($productImage,'dots', 'bg');
+                    border-radius: 50%;
+                    opacity: 0.2;
+                }
+
+                &.slick-active button {
+                    background: map-deep-get($productImage,'dots', 'activebg');
+                }
+            }
+        }
+
+        .slick-arrow {
+            display: none !important;
+        }
+    
+    }
+    .o-btn--zoom {
+        position: absolute;
+        top: 18px;
+        right: 28px;
+        z-index: 999;
+        width: 35px;
+        height: 35px;
+        background-color: map-deep-get($productImage,'zoom', 'bg');
+        border-radius: 50%;
+        border: 0;
+        padding: 0;
+    }
+
+    &-zoom {
+        &__icon {
+            display: block;
+            margin: 0;
+            width: 11px;
+            height: 11px;
+        }
+        &__label {
+           display: none;
+        }
+    }
+}
+.o-modal{
+    background-color: map-deep-get($productImage,'overlay-bg', 'bg');
+    &-image{
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: auto 95%;
+        background-position: center;
+        cursor: url('../images/crossicon.png'),url('../images/crossicon.ico'),url('../images/crossicon.cur'),move;
+    }
+    &-content{
+        height: 100vh;
+        width: 100vw;
+        overflow: auto;
+        position: relative;
+    }
+    .o-btn{
+        display: none;
+    }
+}
+.open-zoom-modal {
+    margin-top: 0;
+    margin-top: -130px;
+
+    header {
+        z-index: -1;
+        top: -130px
+    }
+
+    .u-blur-background {
+       filter: blur(0);
+    }
+}
+@import "_product-images-tablet";
+@import "_product-images-desktop";

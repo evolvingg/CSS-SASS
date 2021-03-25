@@ -1,0 +1,36 @@
+@media (min-width: $screen-md) {
+    .c-product-copy-v2 {
+    
+        &-product-name {
+            &__text {
+                @include setFonts($productCopyStyles, 'heading-md');
+
+                margin-bottom: 18px;
+            }
+        }
+    
+        &.product-description {
+            .c-product-copy-v2 {
+                &-content {
+                    &__item {
+                        @include setFonts($productCopyStyles, 'description-md');
+                    }
+                }
+            }
+        }
+    
+        &.product-acc-content {
+            .c-product-copy-v2 {
+                &__wrapper {
+                    margin-bottom: 18px;
+                }
+    
+                &-content {
+                    &__item {
+                        @include setFonts($productCopyStyles, 'accordion-text-md');
+                    }
+                }
+            }
+        }
+    }
+}

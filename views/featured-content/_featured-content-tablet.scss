@@ -1,0 +1,9 @@
+@media (min-width: $screen-sm){
+	.c-featured-content {
+		&-copy {
+			&__link {
+		        margin-bottom: 50px;
+			}
+		}
+	}
+}

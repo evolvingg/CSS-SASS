@@ -1,0 +1,12 @@
+@media (min-width: $screen-md){
+	.form-v2 {
+		.textfield,
+	    .c-control-label,
+	    .dropdown,
+	    .textarea,
+	    .emailaddress,
+	    .date {
+			width: 50%;
+		}
+	}
+}

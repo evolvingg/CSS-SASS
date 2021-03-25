@@ -1,0 +1,18 @@
+@media (min-width: $screen-md) {
+    .c-product-images {
+        &-nav {
+            .slick-dots {
+                margin: 10px 0 16px;
+            }
+        
+        }
+        .o-btn--zoom {
+            right: 38px;
+        }
+        &__modal {
+            .o-btn--close{
+                display: none !important;
+            }
+        }
+    }
+}

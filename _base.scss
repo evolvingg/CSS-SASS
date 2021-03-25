@@ -1,0 +1,130 @@
+/*removeIf(d2component)*/
+
+/*removeIf(override)*/
+/* ----------------------------------------------------------------------------- *\
+   CONFIG
+\* ----------------------------------------------------------------------------- */
+
+$theme: '<%= theme %>';
+
+$font-path: '<%= fontPath %>';
+$image-path: '<%= imagePath %>';
+
+$bp-small: <%= breakpointSmall %>;
+$bp-medium: <%= breakpointMedium %>;
+$bp-large: <%= breakpointLarge %>;
+$bp-extra-large: <%= breakpointXlarge %>;
+$bp-desktop: <%= breakpointXlarge %>;
+
+$containerSmall: <%= containerSmall %>;
+$containerMedium: <%= containerMedium %>;
+$containerLarge: <%= containerLarge %>;
+$containerXLarge: <%= containerXLarge %>;
+
+
+/* ----------------------------------------------------------------------------- *\
+   MIXINS
+\* ----------------------------------------------------------------------------- */
+
+@import "mixins/animations";
+@import "mixins/font-face";
+@import "mixins/theme";
+@import "mixins/transition";
+@import "mixins/utils";
+@import "mixins/map-deep-get";
+@import "mixins/font-setup";
+@import "mixins/search";
+@import "mixins/loader";
+
+/* ----------------------------------------------------------------------------- *\
+   THEME
+\* ----------------------------------------------------------------------------- */
+
+
+@import "themes/<%= theme %>/breakpoint-variables";
+@import "themes/<%= theme %>/fonts-variables";
+@import "themes/<%= theme %>/colors";
+
+/* ----------------------------------------------------------------------------- *\
+   OBJECTS STYLES
+\* ----------------------------------------------------------------------------- */
+
+@import "global/fonts/fonts";
+@import "themes/<%= theme %>/layout";
+@import "themes/<%= theme %>/buttons";
+
+/* ----------------------------------------------------------------------------- *\
+   CAROUSEL STYLES
+\* ----------------------------------------------------------------------------- */
+@import "themes/<%= theme %>/slick-carousel";
+
+/*endRemoveIf(override)*/
+
+/*endRemoveIf(d2component)*/
+
+
+
+/* ----------------------------------------------------------------------------- *\
+   COMPONENT STYLES
+\* ----------------------------------------------------------------------------- */
+
+<%if(cssUnbundling) {
+    if (componentName && templatePath.hasOwnProperty(componentName)) {
+        var filepath="../../../app/"+name+"/sass/views/"+componentName+"/"+componentName,
+        actualPath="app/"+name+"/sass/views/"+componentName+"/_"+componentName+".scss";
+        if ( fs.existsSync(actualPath)) {
+            %>@import "../../../app/<%= name %>/sass/views/<%= componentName %>/<%= componentName %>";
+            <%
+        }
+        if(componentName && cssDependency && cssDependency.hasOwnProperty(componentName)) {
+            var depArray=cssDependency[componentName];
+            depArray.forEach(function(dependencyComponent, index) {
+                actualPath="app/"+name+"/sass/views/"+dependencyComponent+"/_"+dependencyComponent+".scss";
+                if ( fs.existsSync(actualPath)) {
+                    %> @import "../../../app/<%= name %>/sass/views/<%= dependencyComponent %>/<%= dependencyComponent %>";
+                    <%
+                }
+            }
+            );
+        }
+    }
+}
+ 
+ 
+else {
+    for (var key in templatePath) {
+        if (templatePath.hasOwnProperty(key)) {
+            var filepath="../../../app/"+name+"/sass/views/"+key+"/"+key,
+            actualPath="app/"+name+"/sass/views/"+key+"/_"+key+".scss";
+            if ( fs.existsSync(actualPath)) {
+                %>@import "../../../app/<%= name %>/sass/views/<%= key %>/<%= key %>";
+                <%
+            }
+        }
+    }
+}
+ 
+%>
+
+/*removeIf(d2component)*/
+
+/*removeIf(critical)*/
+
+
+/* ----------------------------------------------------------------------------- *\
+   PRINT
+\* ----------------------------------------------------------------------------- */
+@import "themes/<%= theme %>/print";
+
+/* ----------------------------------------------------------------------------- *\
+   UTILS
+\* ----------------------------------------------------------------------------- */
+@import "themes/<%= theme %>/utils";
+
+/* ----------------------------------------------------------------------------- *\
+   Global Override CSS
+\* ----------------------------------------------------------------------------- */
+
+/*endRemoveIf(critical)*/
+
+/*endRemoveIf(d2component)*/

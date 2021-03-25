@@ -1,0 +1,54 @@
+// sass-lint:disable-all
+@import "expand-collapse-variables";
+
+.c-expandcollapse {
+    width: 100%;
+    padding: 18px $gutter-width;
+
+    svg {
+        display: block;
+        width: 500px;
+    }
+
+    .c-svg {
+        display: none;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: calc(100% - 30px);
+        padding-top: 18px;
+        border-bottom: 1px solid
+            map-deep-get($expandCollapse, "list-link", color);
+    }
+
+    &__link {
+        text-decoration: none;
+        position: relative;
+
+        &::after {
+            content: "\2212";
+            font-weight: 700;
+            color: map-deep-get($expandCollapse, "list-link", color);
+            position: absolute;
+            right: 2%;
+        }
+    }
+
+    &__header {
+        @include setFonts($expandCollapse, "accordion-header");
+
+        span {
+            color: map-deep-get($expandCollapse, "list-link", color);
+        }
+    }
+
+    &__body {
+        display: none;
+        padding-top: 20px;
+    }
+}
+
+@import "expand-collapse__tablet";
+@import "expand-collapse__desktop";

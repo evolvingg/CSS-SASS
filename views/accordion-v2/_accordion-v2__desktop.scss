@@ -1,0 +1,12 @@
+@media (min-width: $screen-md) {
+    .accordion-v2 {
+        &-panel-heading__link {
+            padding-top: 12px;
+            padding-bottom: 13px;
+        }
+
+        &.last-accordion {
+            margin-bottom: 40px;
+        }
+    }
+}

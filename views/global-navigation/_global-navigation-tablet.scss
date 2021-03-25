@@ -1,0 +1,11 @@
+@media (min-width: $screen-sm) {
+    .c-global-navigation {
+        &__logo {
+            width: 99px;
+            height: 31px;
+        }
+    }
+    .o-navbar {
+        padding: 15px 0 14px;
+    }
+}

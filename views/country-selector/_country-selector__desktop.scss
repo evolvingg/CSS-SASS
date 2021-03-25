@@ -1,0 +1,25 @@
+@media (min-width: $screen-md) {
+    .c-country-selector{
+        margin-bottom: 110px;
+
+        &__brand-quote {
+            @include setFonts($countrySelector, 'quote-desk');
+
+            margin-bottom: 28px;
+        }
+
+        &-autosearch {
+            &__elements {
+                margin-bottom: 66px;
+                max-width: 578px;
+            }
+        }
+
+        &__item-lang__item {
+            @include setFonts($countrySelector, 'list-link-desk');
+            
+
+            padding-top: 0;
+        }
+    }
+}

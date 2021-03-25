@@ -1,0 +1,34 @@
+$review-divider-color: #e0e0df;
+
+$reviews:(
+	averageRingBlock: (
+		background: $brand-primary-color1,
+		color: $brand-primary-color,
+		heading-font: map-deep-get($fontVariable,'h2','font'),
+		heading-lh: map-deep-get($fontVariable,'h2','lh'),
+		heading-font-mob: map-deep-get($fontVariable,'h2','font'),
+		heading-lh-mob: map-deep-get($fontVariable,'h2','lh'),
+		avg-text-font: map-deep-get($fontVariable,'sh6-mob','font'),
+		avg-text-lh: map-deep-get($fontVariable,'sh6-mob','lh')
+	),
+	sort-container: (
+
+	),
+	reviews-container-block: (
+		heading-color: $brand-primary-color,
+		text-color: $brand-secondary-color,
+		heading-font: map-deep-get($fontVariable,'h3','font'),
+		heading-lh: map-deep-get($fontVariable,'h3','lh'),
+		heading-font-mob: map-deep-get($fontVariable,'h3-mob','font'),
+		heading-lh-mob: map-deep-get($fontVariable,'h3-mob','lh'),
+		reviewer-font: map-deep-get($fontVariable,'sh2-mob','font'),
+		reviewer-lh: map-deep-get($fontVariable,'sh2-mob','lh'),
+		reviwer-comments-font: map-deep-get($fontVariable,'sh5-mob','font'),
+		reviwer-comments-lh: map-deep-get($fontVariable,'sh5-mob','lh'),
+		reviwer-comments-font-desk: map-deep-get($fontVariable,'default-font','font'),
+		reviwer-comments-lh-desk: map-deep-get($fontVariable,'default-font','lh')
+	),
+	paging: (
+
+	)
+);

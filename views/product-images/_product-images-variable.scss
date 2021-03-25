@@ -1,0 +1,12 @@
+$productImage:(
+    overlay-bg: (
+        bg:rgba(0,0,0,0.75),
+    ),
+    dots:(
+        bg: $color-black,
+        activebg: $brand-primary-color
+    ),
+    zoom:(
+        bg: $brand-primary-color
+    )
+);

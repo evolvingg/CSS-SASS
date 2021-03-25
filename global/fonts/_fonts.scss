@@ -1,0 +1,6 @@
+@import "fonts_variables";
+@import "font-guide";
+
+%font-family-base-primary {
+  @include font-setup($base-font-primary, 300);
+}

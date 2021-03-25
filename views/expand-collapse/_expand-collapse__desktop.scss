@@ -1,0 +1,26 @@
+@media (min-width: $screen-md) {
+    .c-expandcollapse {
+        width: 25%;
+
+        &::after {
+            display: none;
+        }
+
+        &__body {
+            display: block !important;
+            padding-top: 18px;
+        }
+        
+        &__header {
+            @include setFonts($expandCollapse, 'accordion-header-desk');
+
+            .hidden-xs {
+                display: block !important;
+            }
+
+            .visible-xs {
+                display: none !important;
+            }
+        }
+    }
+}

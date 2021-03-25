@@ -1,0 +1,15 @@
+$formV2:(
+	labelText: (
+		font: map-deep-get($fontVariable,'sh2-mob','font'),
+		lh: map-deep-get($fontVariable,'sh2-mob','lh')
+	),
+	errorText: (
+		font: map-deep-get($fontVariable,'sh7','font'),
+		lh: map-deep-get($fontVariable,'sh7','lh')
+	),
+	input:(
+		errorColor: $brand-error-color,
+		color: $brand-secondary-color,
+		border: $brand-input-border-color,
+	)
+)

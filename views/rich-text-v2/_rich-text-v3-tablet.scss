@@ -1,0 +1,9 @@
+@media (min-width: $screen-sm) {
+    .c-rich-text-v2 { 
+        p {
+            &:last-child {
+                margin-bottom: 49px;
+            }
+        }
+    }
+}

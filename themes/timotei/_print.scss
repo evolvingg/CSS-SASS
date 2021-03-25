@@ -1,0 +1,152 @@
+@media print {
+    body {
+        margin: 0;
+    }
+    [class*="col-md-"] { float: left; }
+    .col-md-1 {
+        width: 8.333333333333332%;
+    }
+    .col-md-2 {
+        width: 16.666666666666664%;
+    }
+    .col-md-3 {
+        width: 25%;
+    }
+    .col-md-4 {
+        width: 33.33333333333333%;
+    }
+    .col-md-5 {
+        width: 41.66666666666667%;
+    }
+    .col-md-6 {
+        width: 50%;
+    }
+    .col-md-7 {
+        width: 58.333333333333336%;
+    }
+    .col-md-8 {
+        width: 66.66666666666666%;
+    }
+    .col-md-9 {
+        width: 75%;
+    }
+    .col-md-10 {
+        width: 83.33333333333334%;
+    }
+    .col-md-11 {
+        width: 91.66666666666666%;
+    }
+    .col-md-12 {
+        width: 100%;
+    }
+    a:after,
+    a:link:after,
+    a:visited:after {
+        content: none !important;
+    }
+    .recipe-detail-page {
+        header,
+        footer,
+        .c-recipe-hero,
+        .c-recipe-rating-overview,
+        .o-social-sharing,
+        .c-recipe-products,
+        .c-recipe-nutrients,
+        .c-recipe-list-carousel,
+        .p-section__hide,
+        .c-reviews,
+        .c-adaptive-image-v2,
+        .c-related-articles {
+            display: none;
+        }
+        .o-text__heading-1,
+        .o-text__heading-2,
+        .o-text__heading-3,
+        .o-text__heading-4,
+        .o-text__heading-5,
+        .o-text__heading-6 {
+            float: left;
+            text-align: center;
+            width: 100%;
+        }
+        .row {
+            position: relative;
+        }
+        .print__recipe-hero {
+            > .row {
+                > .col-md-6 {
+                    width: 100%;
+                    > .row {
+                        > .col-md-8 {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        .o-content-wrapper {
+            border: 1px solid $gray;
+        }
+        .c-recipe-dietary-attributes {
+            position: absolute;
+            top: 0;
+            right: 10px;
+        }
+        .c-recipe-attributes {
+            &__list {
+                width: 100%;
+                text-align: center;
+                border-top: 1px solid $gray;
+                border-bottom: 1px solid $gray;
+                &-item {
+                    border-width: 0 1px 0 0;
+                    display: inline-block;
+                    margin: 0;
+                    float: none;
+                    width: auto;
+                    &:last-child {
+                        border-right: 0;
+                    }
+                }
+            }
+        }
+        .c-recipe-content {
+            text-align: center;
+            display: inline-block;
+            &-ingredients__print {
+                text-align: left;
+                padding: 0;
+            }
+            &-ingredients__list {
+                margin-top: 10px;
+            }
+            &__tips {
+                border-width: 1px 0 0 0;
+                display: block;
+                &-desc {
+                    pre {
+                        border: 0;
+                    }
+                }
+            }
+            .o-text__heading-1 {
+                text-align: center;
+                width: 100%;
+            }
+        }
+        .c-recipe-cooking-method {
+            border-left: 1px solid $gray;
+            &__list-item {
+                float: left;
+                width: 100%;
+                border: none;
+            }
+        }
+        .c-recipe-copy__tips {
+            border-width: 1px 0 0 0;
+            .c-recipe-content__tips-desc {
+                width: 100%;
+            }
+        }
+    }
+}

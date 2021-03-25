@@ -1,0 +1,34 @@
+@media (min-width: $screen-md) {
+    .c-rich-text-v2 { 
+        h1,
+        h2 {
+            margin-bottom: 22px;
+        }
+
+        h3 {
+            @include fontSize(h3);
+        }
+
+        p {
+            @include fontSize(sh1);
+            &:last-child {
+                margin-bottom: 75px;
+            }
+        }
+        p.smallText {
+            @include fontSize(txtlink);
+        }
+
+        &.thank-you {
+            padding-top: 50px;
+        }
+
+        &.error-msg {
+            padding-top: 75px;
+            
+            h1 {
+                margin-bottom: 25px;
+            }
+        }
+    }
+}

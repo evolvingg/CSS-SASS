@@ -1,0 +1,6 @@
+@mixin text-align($xs-align, $md-align) {
+    text-align: $xs-align;
+    @media(min-width: $screen-sm) {
+    	text-align: $md-align;
+    }
+}

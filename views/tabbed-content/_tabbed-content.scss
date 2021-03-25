@@ -1,0 +1,68 @@
+@import 'tabbed-content-variables';
+
+.tabbed-content {
+    @include container;
+
+    &-tabs {
+        display: flex;
+        list-style: none;
+        padding: 0;
+    }
+
+    &__link {
+        @include tag-tab-btn();
+
+        margin: 0;
+        position: relative;
+    
+        &:hover {
+            background-color: map-deep-get($tabStyles, 'tab-btn', hvr-color);
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            text-decoration: none;
+            color: map-deep-get($tabStyles, 'tab-btn', color);
+        }
+    }
+
+    &__tab {
+        display: flex;
+        margin-right: 12px;
+
+        &:last-of-type {
+            margin-right: 0;
+        }
+
+        &--is-active {
+            .tabbed-content__link {
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 14px;
+                    height: 14px;
+                    background-color: map-deep-get($tabStyles, 'tab-btn', bg-color);
+                    left: 43%;
+                    transform: rotate(45deg);
+                }
+
+                &:hover {
+                    background-color: map-deep-get($tabStyles, 'tab-btn', bg-color);
+                }
+            }
+        }
+    }
+
+    &-panel__body {
+        display: none;
+
+        &--is-active {
+            display: block;
+        }
+    }
+
+    svg {
+        display: block;
+    }
+}

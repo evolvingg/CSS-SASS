@@ -1,0 +1,38 @@
+@import 'product-variants-and-price-variables';
+
+.c-product-variants-and-price{
+
+    svg {
+        display: block;
+    }
+
+    .c-dropdown {
+        margin-bottom: 31px;
+        &-label { 
+            display: none;
+
+            &--single {
+                display: block;
+        
+                .c-dropdown-label__unit {
+                    @include setFonts($productVariants, 'lbl-stl');
+        
+                    font-weight: 300;
+                    border-top: 1px solid map-deep-get($productVariants, 'lbl-stl', br-color);
+                    border-bottom: 1px solid map-deep-get($productVariants, 'lbl-stl', br-color);
+                    width: 100%;
+                    display: block;
+                    padding: 15px 6px;
+                }
+            }
+        }
+
+        &-select,
+        &-label--single {
+            margin-bottom: 0;
+        }
+    }
+}
+
+@import 'product-variants-and-price__tablet';
+// @import 'product-variants-and-price__desktop';

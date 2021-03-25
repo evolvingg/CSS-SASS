@@ -1,0 +1,10 @@
+@media (min-width: $screen-md) {
+    .c-social-sharing-inline {
+        margin-bottom: 50px;
+        
+        .product-detail-wrapper & {
+            justify-content: flex-end;
+            margin-bottom: 101px;
+        }
+    }
+}

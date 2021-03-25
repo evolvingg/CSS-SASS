@@ -1,0 +1,118 @@
+@import '_search-input-v2-variables';
+.c-secondary-nav{
+    .c-search-input-v2{
+        svg {
+            display: block;
+        }
+        &__search-handler{
+            position: absolute;
+            right: 54px;
+            bottom: -40px;
+            z-index: 10;
+            .o-btn{
+                background-color: transparent;
+                padding: 0;
+                border:0;
+                &:focus{
+                    outline: none;
+                }
+            }
+            svg{
+                width: 25px;
+                height: 23px;
+            }
+        }
+        &__search-label{
+            display: none;
+        }
+        &__search-overlay {
+            &.o-modal {
+                background: map-deep-get($searchInput,'overlayBg','bg');
+            }
+    
+            .o-modal-header {
+                position: relative;
+                .o-btn--search-close {
+                    position: absolute;
+                    border: 0;
+                    padding: 0;
+                    max-height: 30px;
+                    max-width: 30px;
+                    top: 20px;
+                    right: 0;
+                    background-color: transparent;
+    
+                    @media (min-width: $screen-md){
+                        top: 40px;
+                    }    
+                    svg {
+                        width: 30px;
+                        height: 30px;
+                        fill: map-get($searchInput,'closeColor');
+                    }
+                }
+            }
+    
+            .o-modal-content {
+                cursor: default;
+                overflow-y: auto;
+                height: 100%;
+                width: 100%;
+            }
+    
+            .c-search-input-v2 {
+                width: 100%;
+                &__logo{
+                    display: none;
+                }
+    
+                &__wrapper {
+                    position: relative;
+                    margin: 89px 0 0;    
+                    .c-search-input-v2__header h2 {
+                        color: map-deep-get($searchInput,'heading','color');
+                        font-weight: 400;
+                        padding-bottom: 25px;
+                    }
+                    .c-search-input-v2-form__elements {
+                        @include search();
+                        
+                        position: relative;
+                        height: 52px;
+                    }
+    
+                    .o-btn--primary {
+                        background-color: map-deep-get($searchInput,'button','bg');
+                        color: map-deep-get($searchInput,'button','color');
+
+                        display: flex !important;
+                    }
+    
+                    // sass-lint:disable no-important
+                    .o-btn--search {
+                        display: none !important;
+                    }
+                    .tt-menu {
+                        padding: 13px 24px;
+                    }
+                }
+    
+                // scss-lint:disable SelectorDepth
+                .tt-suggestion {
+                    @include fontSize(sh7);
+
+                    color: map-deep-get($searchInput,'suggestion','color');    
+                    cursor: pointer;
+                    text-decoration: underline;
+                    margin: 0;
+                    padding: 6px 0;
+                }
+    
+                .c-global-search__close {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@import '_search-input-v2-desktop';

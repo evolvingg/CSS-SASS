@@ -1,0 +1,10 @@
+@media (min-width: $screen-md) {
+    .call-to-action {
+        &.thank-you,
+        &.error-msg {
+            button {
+                margin-bottom: 75px;
+            }
+        }
+    }
+}

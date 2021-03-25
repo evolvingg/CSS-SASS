@@ -1,0 +1,64 @@
+@import '_related-products-variables';
+
+.c-related-products {
+    margin-bottom: 50px;
+    background-color: $quickview-background-color;
+
+    svg {
+        display: block;
+    }
+
+    &__wrapper {
+        text-align: center;
+    }
+    &-heading {
+        .o-text__heading-2 {
+            padding: 50px 0 26px 0;
+            color: map-get($relatedColors, headingColor);
+            @include fontSize(h1-mob);
+        }
+    }
+    &-item {
+        position: relative;
+        &-content {
+            padding: 20px;
+            .o-text__heading-2,
+            .o-text__heading-2 a {
+                font-size: 16px;
+                line-height: 22px;
+                color: map-get($relatedColors, headingColor);
+            }
+            .c-inline-review {
+                margin-bottom: 50px;
+            }
+        }
+        &-image__container {
+            img {
+                display: inline-block;
+                margin: 0 auto;
+            }
+        }
+        &-image {
+            position: relative;
+        }
+    }
+    .slick-prev,
+    .slick-next {
+        left: 1%;
+        right: auto;
+        top: 32%;
+        z-index: 10;
+        width: 35px;
+        height: 35px;
+        background-size: 35px 35px;
+        display: block;
+    }
+    .slick-next {
+        background-position: top right;
+        right: 1%;
+        left: auto;
+    }
+    
+}
+
+@import '_related-products-desktop';

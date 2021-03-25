@@ -1,0 +1,33 @@
+$navigationVar: (
+    bg: $color-white,
+    topbarBg: $brand-overlay-color,
+    callToactionText: $brand-primary-color,
+    hamburger: $brand-primary-color,
+    backButton: (
+        font: map-deep-get($fontVariable,'sh2','font'),
+        lh: map-get($fontVariable,'btn-lh'),
+        color: $brand-primary-color,
+        bg: $color-white,
+    ),
+    overlay: (
+        bg: $color-white,
+        crossColor: $brand-primary-color,
+    ),
+    menuTier1:(
+        color: $brand-secondary-color,
+        activeColor: $brand-primary-color,
+        font: map-deep-get($fontVariable,'sh2','font'),
+        lh: map-get($fontVariable,'btn-lh'),
+        font-desk: map-deep-get($fontVariable,'sh4','font'),
+        font-tab-landscape: map-deep-get($fontVariable,'sh7','font'),
+        border: $brand-primary-color,
+    ),
+    menuTier2:(
+        color: $brand-primary-color,
+        font: map-deep-get($fontVariable,'small-text','font'),
+    ),
+    gotoFullSite:(
+        font: map-deep-get($fontVariable,'sh7','font'),
+        lh: map-deep-get($fontVariable,'sh4-mob','lh'),
+    )
+)

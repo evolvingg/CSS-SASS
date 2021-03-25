@@ -1,0 +1,76 @@
+@import "sitemap-variables";
+
+.c-sitemap {
+    @include container;
+
+    svg {
+        display: block;
+    }
+
+    li {
+        list-style: none;
+
+        &>a {
+            text-decoration: underline;
+        }
+    }
+
+    >div {
+        margin: 0 -$gutter-width;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+        margin-bottom: 50px;
+        width: auto;
+    }
+
+    .o-text__heading-1 {
+        @include setFonts($sitemap, 'heading');
+
+        margin-bottom: 21px;
+        color: map-deep-get($sitemap, 'heading', color);
+    }
+
+    .c-sitemap__pages-column {
+        margin-bottom: 44px;
+        width: 100%;
+
+        ul {
+            margin-top: 12px;
+            padding: 0;
+
+            li {
+                margin-bottom: 15px;
+            }
+        }
+
+        &:nth-of-type(3n+4) {
+            clear: left;
+        }
+    }
+
+    .c-sitemap__section-btn {
+        @include setFonts($sitemap, 'section-heading');
+
+        color: map-deep-get($sitemap, 'section-heading', color);
+        margin-bottom: 12px;
+        font-weight: 700;
+
+        &:hover {
+            color: map-deep-get($sitemap, 'section-heading', hvr-color);
+        }
+    }
+
+    .c-sitemap__subsection-btn {
+        @include setFonts($sitemap, 'sub-section');
+
+        color: map-deep-get($sitemap, 'sub-section', color);
+
+        &:hover {
+            color: map-deep-get($sitemap, 'sub-section'- hvr-color);
+        }
+    }
+
+    @import "sitemap__tablet";
+    @import "sitemap__desktop";
+}

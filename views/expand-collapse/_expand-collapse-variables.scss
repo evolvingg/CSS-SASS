@@ -1,0 +1,13 @@
+$expandCollapse: (
+    list-link: (
+        color: $brand-primary-color
+    ),
+    accordion-header: (
+        font: map-deep-get($fontVariable, 'h4-mob', font),
+        lh: map-deep-get($fontVariable, 'h4-mob', lh)
+    ),
+    accordion-header-desk: (
+        font: map-deep-get($fontVariable, 'h4', font),
+        lh: map-deep-get($fontVariable, 'h4', lh)
+    )
+);

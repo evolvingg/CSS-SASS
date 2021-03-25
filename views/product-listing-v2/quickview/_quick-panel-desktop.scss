@@ -1,0 +1,16 @@
+@media (min-width: $screen-md){
+.c-product-listing-v2-quickview {
+        &__title {
+            @include setFonts($quickView,'title-desktop');
+        }
+
+        &__productname.o-text__heading-2 {
+            @include setFonts($quickView,'heading-desktop');
+            margin-bottom: 11px;
+        }
+        &__desc {
+            @include setFonts($quickView,'desc');
+            margin-bottom: 8px;
+        }
+    }   
+}

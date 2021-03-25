@@ -1,0 +1,52 @@
+$pageListing:(
+    selectLabel:(
+        font: map-deep-get($fontVariable,'sh4','font'),
+        lh: map-deep-get($fontVariable,'select-label','lh'),
+        color: $brand-primary-color,
+    ),
+    select:(
+        font: map-deep-get($fontVariable,'sh4','font'),
+        lh: map-deep-get($fontVariable,'select-label','lh'),
+        color: $brand-secondary-color,
+        borderColor: $brand-secondary-color,
+    ), 
+    totalCount: (
+        font: map-deep-get($fontVariable,'small-text','font'),
+        lh: map-deep-get($fontVariable,'product-count','font'),
+        color: $brand-secondary-color,
+    ),
+    heading:(
+        font: map-deep-get($fontVariable,'sh2','font'),
+        lh: map-deep-get($fontVariable,'sh2','lh'),
+        color: $brand-primary-color
+    ),
+    heading-mob:(
+        font: map-deep-get($fontVariable,'select','font'),
+        lh: map-deep-get($fontVariable,'select','lh'),
+        color: $brand-primary-color
+    ),
+    desc:(
+        font: map-deep-get($fontVariable,'txtlink','font'),
+        lh: map-deep-get($fontVariable,'txtlink','lh'),
+        color: $brand-secondary-color
+    ),
+    desc-mob:(
+        font: map-deep-get($fontVariable,'sh6','font'),
+        lh: map-deep-get($fontVariable,'sh6','lh'),
+        color: $brand-secondary-color
+    ),
+    readmore:(
+        font: map-deep-get($fontVariable,'txtlink','font'),
+        lh: map-deep-get($fontVariable,'txtlink','lh'),
+        color: $brand-primary-color
+    ),
+    subheading:(
+        font: map-deep-get($fontVariable,'select','font'),
+        lh: map-deep-get($fontVariable,'select','lh'),
+        color: $brand-secondary-color
+    ),
+    subheading-mob:(
+        font: map-deep-get($fontVariable,'sh5-mob','font'),
+        lh: map-deep-get($fontVariable,'select','lh'),
+    )
+);

@@ -1,0 +1,40 @@
+
+/* ----------------------------------------------------------------------------- *\
+   DEFAULT COLOR PALLETE
+\* ----------------------------------------------------------------------------- */
+$color-white:       	#fff !default;
+$color-black:       	#000 !default;
+$color-error:			#d0021b !default;
+$color-error-fill:		#ffd4d9 !default;
+$gray-border:           #c7c7c7 !default;;
+$gray-dark:              #333 !default;   // black
+$gray:                   #5a5a5a !default; // charcoal
+$gray-light:             #747474 !default;   //gray
+$gray-lighter:           #c0c0c0 !default; // matt gray
+$gray-pale:          	 #efefef !default; // pale gray
+
+/* ----------------------------------------------------------------------------- *\
+   BRAND COLOR PALLETE
+\* ----------------------------------------------------------------------------- */
+
+$brand-primary-color:            #046938 !default;
+$brand-primary-color1:		#f5f5f3 !default;
+
+$brand-secondary-color:    #4e4d4d !default;
+$brand-secondary-color1:    #dbcb94 !default;
+$brand-secondary-color2:    #ae9d64 !default;
+$brand-secondary-color3:    #f3eedd !default;
+$brand-input-border-color: #cecbcb !default;
+$brand-tags-color: #d0d600;
+
+$brand-secondary-color4: #cecbcb;
+
+$brand-hover-color:    #054124 !default;
+
+$brand-error-color:        #da0a23 !default;
+
+$brand-overlay-color:		#f5f5f3 !default;
+
+$text-color: $brand-secondary-color;
+
+$brand-primary: $color-white;

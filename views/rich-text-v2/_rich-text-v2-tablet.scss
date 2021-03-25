@@ -1,0 +1,36 @@
+@media (min-width: $screen-sm) {
+    .c-rich-text-v2 { 
+        padding-top: 50px;
+
+        h1,
+        h2 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            
+            &:last-child {
+                margin-bottom: 50px;
+            }
+        }
+
+        &.thank-you {
+            padding-top: 15px;
+
+            p:last-child {
+                margin-bottom: 10px;
+            }
+        }
+
+        &.error-msg {
+            
+            p {
+                &:last-child {
+                    margin-bottom: 40px;
+                }
+            }
+        }
+
+    }
+}

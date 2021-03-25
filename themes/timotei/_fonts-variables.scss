@@ -1,0 +1,143 @@
+
+/* ----------------------------------------------------------------------------- *\
+    Variables for font-sizes
+/* ----------------------------------------------------------------------------- */
+
+$fontVariable : (
+    default-font: (
+        font:16px,
+        lh: 1.5
+    ),
+    h1: (
+        font: 60px,
+        lh: 65px
+    ),
+    h1-mob: (
+        font: 36px,
+        lh: 1.11
+    ),
+    h1-var1: (
+        font: 50px,
+        lh: 55px
+    ),
+    h1-var-mob: (
+        font: 35px,
+        lh: 1.14
+    ),
+    h2: (
+        font: 45px,
+        lh: 1.11
+    ),
+    h2-mob: (
+        font: 30px,
+        lh: 1.07
+    ),
+    h3: (
+        font: 35px,
+        lh: 1.14
+    ),
+    h3-mob: (
+        font: 25px,
+        lh: 1.28
+    ),
+    h4: (
+        font: 26px,
+        lh: 32px
+    ),
+    h4-mob: (
+        font: 20px,
+        lh: 1.3
+    ),
+    h5: (
+        font: 24px,
+        lh: 1.25
+    ),
+    h5-mob: (
+        font: 20px,
+        lh: 1.3
+    ),
+    sh1: (
+        font: 24px,
+        lh: 36px
+    ),
+    sh1-mob: (
+        font:18px,
+        lh: 26px
+    ),
+    sh2: (
+        font:22px,
+        lh: 1.36
+    ),
+    sh2-mob: (
+        font: 16px,
+        lh: 1.38
+    ),
+    sh3: (
+        font:24px,
+        lh: 30px
+    ),
+    sh3-mob: (
+        font:20px,
+        lh: 30px
+    ),
+    sh4: (
+        font:18px,
+        lh: 28px
+    ),
+    sh4-mob: (
+        font:17px,
+        lh: 25px
+    ),
+    sh5: (
+        font:16px,
+        lh: 23px
+    ),
+    sh5-mob: (
+        font:15px,
+        lh: 1.53
+    ),
+    sh6: (
+        font:15px,
+        lh: 1.47,
+    ),
+    sh6-mob: (
+        font:15px,
+        lh: 22px
+    ),
+    sh7: (
+        font:14px,
+        lh: 1.43
+    ),
+    txtlink: (
+        font:16px,
+        lh: 1.5
+    ),
+    small-text: (
+        font:14px,
+        lh: 20px
+    ),
+    select: (
+        font: 16px,
+        lh: 1.38,
+    ),
+    select-label: (
+        font: 18px,
+        lh: 1.22,
+    ),
+    tag-txt:(
+        font: 13px,
+        lh: 1.54
+    ),
+    product-tag:(
+        font: 11.3px,
+        lh: 1.33
+    ),
+    product-count:(
+        font: 14px,
+        lh: 2.14
+    ),
+    btn-txt: 20px,
+    btn-lh: normal
+);
+
+$zero: 0;
